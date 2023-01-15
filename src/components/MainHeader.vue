@@ -56,10 +56,10 @@ export default {
 
   },
   setup() {
-    const logoPath = '/assets/logos2.png'
-    const hamburgerPath = '/assets/hamburger.png'
-    const heroImage = '/assets/heroImage.jpg'
-    const ramkaPath = '/assets/ramka2.png'
+    const logoPath = require('../assets/logos2.png')
+    const hamburgerPath = require('../assets/hamburger.png')
+    const heroImage = require('../assets/heroImage.jpg')
+    const ramkaPath = require('../assets/ramka2.png')
     const headerListofAnchors = ['O nas', 'Kolekcja', 'Sklep Online', 'Kontakt']
   
     return {
