@@ -1,4 +1,6 @@
 <script> 
+  
+
     export default {
   name: 'mainPage',
   props: {
@@ -47,7 +49,7 @@
             <transition name="fade">
                 <div v-if="currentSlide == 0" class="multiImageContainer__1">
                     <div class="heroImageContainer">
-                        <img :src="heroImagePath" class="heroImage">
+                        <img v-once :src="heroImagePath" class="heroImage">
                     </div>
                     <h1>Ponadczasowa klasyka</h1>
                     <p>VIVISENCE perfekcyjnie łączy klasykę z elegancją. Subtelnie przemyca akcenty najnowszych trendów, dodając bieliźnie zmysłowości i delikatności. W kolekcji królują stonowane, ponadczasowe, bazowe kolory idealne dla kobiety w każdym wieku.</p>
@@ -56,7 +58,7 @@
             <transition name="fade">
                 <div v-if="currentSlide == 1" class="multiImageContainer__2">
                     <div class="heroImageContainer">
-                        <img :src="heroImagePath1" class="heroImage">
+                        <img v-once :src="heroImagePath1" class="heroImage">
                     </div>
                     <h1>Gwarancja jakości</h1>
                     <p>Bielizna VIVISENCE wykonana jest z bardzo starannie wyselekcjonowanych surowców wysokiej jakości. Swoje doświadczenie w branży bieliźniarskiej przekładamy na najwyższą jakość produktów. Nasza bielizna pakowana jest w eleganckie pudełka, które doskonale nadają się na prezent.</p>
@@ -65,7 +67,7 @@
             <transition name="fade">
                 <div v-if="currentSlide == 2" class="multiImageContainer__3">
                     <div class="heroImageContainer">
-                        <img :src="heroImagePath2" class="heroImage">
+                        <img v-once :src="heroImagePath2" class="heroImage">
                     </div>
                     <h1>Komfort i wygoda</h1>
                     <p>VIVISENCE to marka, która dba o każdy biust. W naszej ofercie Klientki znajdą nie tylko perfekcyjnie wykonane konstrukcje, a także szeroki wybór rozmiarów - miseczki do rozmiaru J. Doskonale wiemy, że tylko najwyższa jakość daje poczucie komfortu.</p>
