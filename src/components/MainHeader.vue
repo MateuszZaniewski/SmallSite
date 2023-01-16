@@ -18,18 +18,6 @@
       <li v-for="element in headerListofAnchors" :key="element">{{element}}</li>
     </ul>
   </div>
-  <div>
-    <p style="color: red">xdd</p>
-    <p style="color: red">xdd</p>
-    <p style="color: red">xdd</p>
-    <p style="color: red">xdd</p>
-    <p style="color: red">xdd</p>
-    <p style="color: red">xdd</p>
-    
-  
-  </div>
-
-
 </template>
 
 <script>
@@ -162,10 +150,10 @@ export default {
 .slidingMenu {
   display: flex;
   justify-content: center;
-  width: 90%;
+  width: 100%;
   height: calc(100vh - 90px);
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.856);
   z-index: 100;
   position: absolute;
 }
@@ -178,7 +166,8 @@ export default {
 .slidingMenu ul li {
   padding: 10px 0;
   text-align: center;
-  border-bottom: 1px solid rgb(215, 176, 111);
+  border-bottom: 1px solid rgb(212, 156, 58);
+  font-weight: bold;
 }
 
 .slidingMenu ul li:hover {
@@ -195,6 +184,7 @@ export default {
 
 
 @media (min-width: 700px) {
+
 
   .slidingMenu{
     display: none;
@@ -222,7 +212,7 @@ export default {
   
   #ramka {
     width: 100%;
-    height: 6vw;
+    height: 3vw;
     margin: 0 auto;
   }
   
@@ -239,7 +229,7 @@ export default {
     align-items: center;
     list-style: none;
     gap: 6vw;
-    font-size: 1.8vw;
+    font-size: min(1.8vw, 16px);
   }
 
   .headerList li:hover {
