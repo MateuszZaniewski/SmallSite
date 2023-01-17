@@ -1,17 +1,29 @@
 <template>
   <MainHeader/>
-  <mainPage/>
+  <mainPage v-if="width < 1000"/>
+    <mainPageHightRes v-if="width > 1000"/>
 </template>
 
 <script>
 import MainHeader from './components/MainHeader.vue'
 import mainPage from './components/mainPage.vue'
+import mainPageHightRes from './components/mainPageHightRes.vue'
 
 export default {
   name: 'App',
   components: {
     MainHeader,
     mainPage,
+    mainPageHightRes,
+  },
+
+  setup(){
+    const width = window.innerWidth
+    console.log(width)
+
+    return {
+      width
+    }
   }
 }
 
