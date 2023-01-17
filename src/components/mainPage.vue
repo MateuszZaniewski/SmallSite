@@ -47,7 +47,7 @@
     <main>
         <div class="multiImageContainer">
             <transition name="fade">
-                <div v-if="currentSlide == 0" class="multiImageContainer__1">
+                <div v-show="currentSlide == 0" class="multiImageContainer__1">
                     <div class="heroImageContainer">
                         <img v-once :src="heroImagePath" class="heroImage">
                     </div>
@@ -56,7 +56,7 @@
                 </div>
             </transition>
             <transition name="fade">
-                <div v-if="currentSlide == 1" class="multiImageContainer__2">
+                <div v-show="currentSlide == 1" class="multiImageContainer__2">
                     <div class="heroImageContainer">
                         <img v-once :src="heroImagePath1" class="heroImage">
                     </div>
@@ -65,7 +65,7 @@
                 </div>
             </transition>
             <transition name="fade">
-                <div v-if="currentSlide == 2" class="multiImageContainer__3">
+                <div v-show="currentSlide == 2" class="multiImageContainer__3">
                     <div class="heroImageContainer">
                         <img v-once :src="heroImagePath2" class="heroImage">
                     </div>
@@ -85,21 +85,19 @@
 <style scoped>
 
 .multiImageContainer{
-    position: relative;
+    
 }
 
 .multiImageContainer__1, .multiImageContainer__2, .multiImageContainer__3 {
-    position: absolute;
     text-align: center;
     border-bottom: 1px solid rgb(212, 156, 58);
-    padding-bottom: 0.5rem;
-    height: 75vh;
-    
+    padding-bottom: 10px;
+    height: 448px;
 }
 
 .heroImageContainer {
     width: 80vw;
-    height: 30vh;
+    height: 200px;
     margin: 0 auto;
     padding-top: 2vh;
     max-width: 1280px;

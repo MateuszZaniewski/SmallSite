@@ -39,9 +39,13 @@ export default {
   methods: {
     toggleMenu() {
       this.isToggled = !this.isToggled
+      document.body.style.overflow == 'hidden' ? document.body.style.overflow = 'scroll' : document.body.style.overflow = 'hidden'
     }
 
 
+  },
+  mounted() {
+    console.log(document.body);
   },
   setup() {
     const logoPath = require('../assets/logos2.png')
@@ -154,8 +158,8 @@ export default {
   height: calc(100vh - 90px);
   margin: 0 auto;
   background: rgba(255, 255, 255, 0.856);
-  z-index: 100;
   position: absolute;
+  overflow: hidden;
 }
 
 .slidingMenu ul {
@@ -177,6 +181,10 @@ export default {
 
 .backgroundTransparency {
   opacity: 0.5;
+}
+
+.noSlidingBackground{
+  position: fixed;
 }
 
 

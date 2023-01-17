@@ -2,12 +2,14 @@
   <MainHeader/>
   <mainPage v-if="width < 1000"/>
     <mainPageHightRes v-if="width > 1000"/>
+  <AboutUs/>
 </template>
 
 <script>
 import MainHeader from './components/MainHeader.vue'
 import mainPage from './components/mainPage.vue'
 import mainPageHightRes from './components/mainPageHightRes.vue'
+import AboutUs from './components/AboutUs.vue'
 
 export default {
   name: 'App',
@@ -15,15 +17,18 @@ export default {
     MainHeader,
     mainPage,
     mainPageHightRes,
+    AboutUs
   },
 
   setup(){
     const width = window.innerWidth
-    console.log(width)
-
+  
     return {
-      width
+      width,
     }
+  },
+  mounted() {
+    console.log(document.body);
   }
 }
 
