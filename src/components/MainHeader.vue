@@ -155,7 +155,7 @@ export default {
   display: flex;
   justify-content: center;
   width: 100%;
-  height: calc(100vh - 90px);
+  height: calc(100vh - 30px);
   margin: 0 auto;
   background: rgba(255, 255, 255, 0.856);
   position: absolute;
