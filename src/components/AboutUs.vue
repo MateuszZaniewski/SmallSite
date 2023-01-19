@@ -42,7 +42,6 @@
 
 <template>
     <div class="aboutUsWrapper">
-        <h2>Tak pracujemy</h2>
         <div class="aboutUsSection1">
             <div class="aboutUsSection1__container">
                 <h3>Z miłości do bielizny</h3>
@@ -82,8 +81,8 @@
 
 .aboutUsWrapper h3{
     text-align: center;
+    padding-top: 2vh;
     border-top: 1px solid rgb(212, 156, 58);
-    padding-top: 10px;
 }
 
 .aboutUsWrapper p{
@@ -91,13 +90,14 @@
 }
 
 .aboutUsSection1, .aboutUsSection2, .aboutUsSection3 {
-    display: flex;
-    flex-flow: column nowrap;
+    margin: 0 auto;
 }
 
 .workImage{
-    height: 100%;
-    width: 100%;
+    max-width: 850px;
+    width: 90%;
+    max-height: 450px;
+    margin: 0 auto 2vh auto;
 }
 
 </style>

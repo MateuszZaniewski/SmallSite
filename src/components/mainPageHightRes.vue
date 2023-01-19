@@ -84,6 +84,7 @@
 .multiImageContainer__1, .multiImageContainer__2, .multiImageContainer__3 {
     width: 33%;
     
+    
 }
 
 .heroImageContainer {

@@ -1,5 +1,5 @@
 <template>
-  <div :class="{'backgroundTransparency' : isToggled}">
+  <div class="headerWrapper" :class="{'backgroundTransparency' : isToggled}">
     <div @click="toggleMenu" class="wrapper">
         <span :class="{ open : isToggled}" class="hamburger"></span>
     </div>
@@ -68,6 +68,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+.headerWrapper{
+  margin-top: 2vh;
+}
 
 .wrapper{
   display: flex;
