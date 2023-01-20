@@ -1,8 +1,28 @@
 <template>
   <MainHeader/>
-  <mainPage v-if="width < 1000"/>
-    <mainPageHightRes v-if="width > 1000"/>
-  <AboutUs/>
+
+  <div v-if="currentSection == 0" id="homePage">
+    <mainPage v-if="width < 1000"/>
+      <mainPageHightRes v-if="width > 1000"/>
+    <AboutUs/>
+  </div>
+
+  <div v-if="currentSection == 1" id="aboutUsPage">
+    <aboutUsPage/>
+  </div>
+
+  <div v-if="currentSection == 2" id="collectionPage">
+    <collectionPage/>
+  </div>
+
+  <div v-if="currentSection == 3" id="onlineStorePage">
+    <onlineStorePage/>
+  </div>
+
+  <div v-if="currentSection == 4" id="ContactPage">
+    <ContactPage/>
+  </div>
+
   <FooterMain/>
 </template>
 
@@ -12,6 +32,11 @@ import mainPage from './components/mainPage.vue'
 import mainPageHightRes from './components/mainPageHightRes.vue'
 import AboutUs from './components/AboutUs.vue'
 import FooterMain from './components/FooterMain.vue'
+import aboutUsPage from './components/subComponents/aboutUsPage.vue'
+import collectionPage from './components/subComponents/collectionPage.vue'
+import onlineStorePage from './components/subComponents/onlineStorePage.vue'
+import ContactPage from './components/subComponents/collectionPage.vue'
+
 
 export default {
   name: 'App',
@@ -20,23 +45,34 @@ export default {
     mainPage,
     mainPageHightRes,
     AboutUs,
-    FooterMain
+    FooterMain,
+    aboutUsPage,
+    collectionPage,
+    onlineStorePage,
+    ContactPage,
+    
   },
+  data () {
 
+    return {
+      
+    }
+  },
+  computed: {
+  },
   setup(){
     const width = window.innerWidth
+    const currentSection = 0
   
     return {
       width,
+      currentSection
     }
   },
   mounted() {
-    console.log(document.body);
+  
   }
-}
-
-//<img alt="Vue logo" src="./assets/logo.png">
-
+  }
 </script>
 
 <style>

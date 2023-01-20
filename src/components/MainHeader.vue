@@ -7,7 +7,10 @@
       <img id="mainLogo" :src="logoPath">
         <div :class="{ 'menu-open' : isToggled}" class="headerListArea">
           <ul class="headerList">
-            <li v-for="element in headerListofAnchors" :key="element">{{element}}</li>
+            <li @click="displayAboutUs">O nas</li>
+            <li>Kolekcja</li>
+            <li>Sklep Online</li>
+            <li>Kontakt</li>
           </ul>
         </div>
     </div>
@@ -15,7 +18,10 @@
   </div>
   <div v-if="isToggled" class="slidingMenu">
     <ul>
-      <li v-for="element in headerListofAnchors" :key="element">{{element}}</li>
+      <li @click="displayAboutUs">O nas</li>
+      <li>Kolekcja</li>
+      <li>Sklep Online</li>
+      <li>Kontakt</li>
     </ul>
   </div>
 </template>
@@ -40,23 +46,22 @@ export default {
     toggleMenu() {
       this.isToggled = !this.isToggled
       document.body.style.overflow == 'hidden' ? document.body.style.overflow = 'scroll' : document.body.style.overflow = 'hidden'
-    }
-
-
+    },
+    displayAboutUs(){
+      // currentSection = 1
+    },
   },
   mounted() {
-    console.log(document.body);
+    
   },
   setup() {
     const logoPath = require('../assets/logos2.png')
     const hamburgerPath = require('../assets/hamburger.png')
     const heroImage = require('../assets/heroImage.jpg')
     const ramkaPath = require('../assets/ramka2.png')
-    const headerListofAnchors = ['O nas', 'Kolekcja', 'Sklep Online', 'Kontakt']
   
     return {
       logoPath,
-      headerListofAnchors,
       hamburgerPath,
       heroImage,
       ramkaPath,
