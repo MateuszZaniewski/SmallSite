@@ -4,8 +4,10 @@
 
 <template>
     <div>
-    
-    </div>
+        <h1>
+            Sklep
+        </h1>
+        </div>
 </template>
 
 <style scoped>

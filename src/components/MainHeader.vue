@@ -4,13 +4,13 @@
         <span :class="{ open : isToggled}" class="hamburger"></span>
     </div>
     <div class="logowrapper">
-      <img id="mainLogo" :src="logoPath">
+      <img @click="displayHomePage" id="mainLogo" :src="logoPath">
         <div :class="{ 'menu-open' : isToggled}" class="headerListArea">
           <ul class="headerList">
-            <li @click="displayAboutUs">O nas</li>
-            <li>Kolekcja</li>
-            <li>Sklep Online</li>
-            <li>Kontakt</li>
+            <li @click="displayAboutUs()" >O nas</li>
+            <li @click="displayCollection(); ">Kolekcja</li>
+            <li @click="displayOnlineStore(); ">Sklep Online</li>
+            <li @click="displayContact(); ">Kontakt</li>
           </ul>
         </div>
     </div>
@@ -18,15 +18,17 @@
   </div>
   <div v-if="isToggled" class="slidingMenu">
     <ul>
-      <li @click="displayAboutUs">O nas</li>
-      <li>Kolekcja</li>
-      <li>Sklep Online</li>
-      <li>Kontakt</li>
+      <li @click="displayAboutUs(); toggleMenu();">O nas</li>
+      <li @click="displayCollection(); toggleMenu()">Kolekcja</li>
+      <li @click="displayOnlineStore(); toggleMenu()">Sklep Online</li>
+      <li @click="displayContact(); toggleMenu()">Kontakt</li>
     </ul>
   </div>
 </template>
 
 <script>
+
+import store from '../store'
 
 export default {
   name: 'MainHeader',
@@ -39,7 +41,8 @@ export default {
   data() {
 
     return {
-      isToggled : false
+      isToggled : false,
+      store
     }
   },
   methods: {
@@ -47,9 +50,25 @@ export default {
       this.isToggled = !this.isToggled
       document.body.style.overflow == 'hidden' ? document.body.style.overflow = 'scroll' : document.body.style.overflow = 'hidden'
     },
-    displayAboutUs(){
-      // currentSection = 1
+    hideMenu(){
+      console.log('Elko')
     },
+    displayHomePage() {
+      store.state.currentPage = 0
+    },
+    displayAboutUs() {
+      store.state.currentPage = 1
+    },
+    displayCollection() {
+      store.state.currentPage = 2
+    },
+    displayOnlineStore() {
+      store.state.currentPage = 3
+    },
+    displayContact() {
+      store.state.currentPage = 4
+    },
+
   },
   mounted() {
     

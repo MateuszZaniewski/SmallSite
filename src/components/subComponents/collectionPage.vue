@@ -4,8 +4,10 @@
 
 <template>
     <div>
-    
-    </div>
+        <h1>
+            Kolekcja
+        </h1>
+        </div>
 </template>
 
 <style scoped>

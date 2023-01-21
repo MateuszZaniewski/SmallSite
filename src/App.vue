@@ -1,25 +1,25 @@
 <template>
   <MainHeader/>
 
-  <div v-if="currentSection == 0" id="homePage">
+  <div v-if="store.state.currentPage == 0" id="homePage">
     <mainPage v-if="width < 1000"/>
       <mainPageHightRes v-if="width > 1000"/>
     <AboutUs/>
   </div>
 
-  <div v-if="currentSection == 1" id="aboutUsPage">
+  <div v-if="store.state.currentPage == 1" id="aboutUsPage">
     <aboutUsPage/>
   </div>
 
-  <div v-if="currentSection == 2" id="collectionPage">
+  <div v-if="store.state.currentPage == 2" id="collectionPage">
     <collectionPage/>
   </div>
 
-  <div v-if="currentSection == 3" id="onlineStorePage">
+  <div v-if="store.state.currentPage == 3" id="onlineStorePage">
     <onlineStorePage/>
   </div>
 
-  <div v-if="currentSection == 4" id="ContactPage">
+  <div v-if="store.state.currentPage == 4" id="ContactPage">
     <ContactPage/>
   </div>
 
@@ -36,6 +36,7 @@ import aboutUsPage from './components/subComponents/aboutUsPage.vue'
 import collectionPage from './components/subComponents/collectionPage.vue'
 import onlineStorePage from './components/subComponents/onlineStorePage.vue'
 import ContactPage from './components/subComponents/collectionPage.vue'
+import store from './store'
 
 
 export default {
@@ -55,7 +56,7 @@ export default {
   data () {
 
     return {
-      
+      store
     }
   },
   computed: {
@@ -63,10 +64,11 @@ export default {
   setup(){
     const width = window.innerWidth
     const currentSection = 0
+    
   
     return {
       width,
-      currentSection
+      currentSection,
     }
   },
   mounted() {
