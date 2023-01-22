@@ -4,24 +4,24 @@
         <span :class="{ open : isToggled}" class="hamburger"></span>
     </div>
     <div class="logowrapper">
-      <img @click="displayHomePage" id="mainLogo" :src="logoPath">
+      <router-link to="/"><img @click="displayHomePage" id="mainLogo" :src="logoPath"></router-link>
         <div :class="{ 'menu-open' : isToggled}" class="headerListArea">
           <ul class="headerList">
-            <li @click="displayAboutUs()" >O nas</li>
-            <li @click="displayCollection(); ">Kolekcja</li>
-            <li @click="displayOnlineStore(); ">Sklep Online</li>
-            <li @click="displayContact(); ">Kontakt</li>
+            <router-link to="/about"><li>O nas</li></router-link>
+            <router-link to="/collection"><li>Kolekcja</li></router-link>
+            <router-link to="/onlinestore"><li>Sklep Online</li></router-link>
+            <router-link to="/contact"><li>Kontakt</li></router-link>
           </ul>
         </div>
     </div>
-      <img id="ramka" :src="ramkaPath">
   </div>
+  <img id="ramka" :src="ramkaPath">
   <div v-if="isToggled" class="slidingMenu">
     <ul>
-      <li @click="displayAboutUs(); toggleMenu();">O nas</li>
-      <li @click="displayCollection(); toggleMenu()">Kolekcja</li>
-      <li @click="displayOnlineStore(); toggleMenu()">Sklep Online</li>
-      <li @click="displayContact(); toggleMenu()">Kontakt</li>
+      <router-link to="/about"><li>O nas</li></router-link>
+      <router-link to="/collection"><li>Kolekcja</li></router-link>
+      <router-link to="/onlinestore"><li >Sklep Online</li></router-link>
+      <router-link to="/contact"><li>Kontakt</li></router-link>
     </ul>
   </div>
 </template>
@@ -50,25 +50,6 @@ export default {
       this.isToggled = !this.isToggled
       document.body.style.overflow == 'hidden' ? document.body.style.overflow = 'scroll' : document.body.style.overflow = 'hidden'
     },
-    hideMenu(){
-      console.log('Elko')
-    },
-    displayHomePage() {
-      store.state.currentPage = 0
-    },
-    displayAboutUs() {
-      store.state.currentPage = 1
-    },
-    displayCollection() {
-      store.state.currentPage = 2
-    },
-    displayOnlineStore() {
-      store.state.currentPage = 3
-    },
-    displayContact() {
-      store.state.currentPage = 4
-    },
-
   },
   mounted() {
     
@@ -95,6 +76,7 @@ export default {
 
 .headerWrapper{
   margin-top: 2vh;
+  display: flex;
 }
 
 .wrapper{
@@ -106,6 +88,12 @@ export default {
 .logowrapper{
   display: flex;
   justify-content: center;
+}
+.logowrapper a{
+  display: flex;
+  justify-content: center;
+  color: black;
+  text-decoration: none;
 }
 #mainLogo {
   height: 100%;
@@ -202,6 +190,11 @@ export default {
   font-weight: bold;
 }
 
+.slidingMenu ul a {
+  color: black;
+  text-decoration: none;
+}
+
 .slidingMenu ul li:hover {
     color:rgb(215, 176, 111);
     cursor: pointer;
@@ -240,8 +233,6 @@ export default {
   }
   
   #mainLogo {
-    height: 100%;
-    width: 30%;
     padding-left: 3vw;
     cursor: pointer;
   }

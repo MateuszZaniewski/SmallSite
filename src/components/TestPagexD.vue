@@ -1,8 +1,6 @@
 <script>
-  
-
   export default {
-  name: 'FooterMain',
+  name: 'TestPagexD',
   props: {
     
   },
@@ -26,11 +24,13 @@
     
   },
   setup() {
+    const footerListofAnchors = ['O nas', 'Kolekcja', 'Sklep Online', 'Kontakt', 'Polityka Prywatnosci']
     const facebook = require('../assets/facebook.svg')
     const instagram = require('../assets/instagram.svg')
     const tiktok = require('../assets/tiktok.svg')
 
     return {
+        footerListofAnchors,
         facebook,
         instagram,
         tiktok
@@ -43,10 +43,7 @@
     <footer>
         <div class="footerLinks">
             <ul>
-                <router-link to="/about"><li>O nas</li></router-link>
-                <router-link to="/collection"><li>Kolekcja</li></router-link>
-                <router-link to="/onlinestore"><li>Sklep Online</li></router-link>
-                <router-link to="/contact"><li>Kontakt</li></router-link>
+                <li v-for="item in footerListofAnchors" :key="item">{{item}}</li>
             </ul> 
         </div>
         <div class="footerSocials">
@@ -65,7 +62,6 @@
 footer{
     background: #d49c3a;
     padding-bottom: 1vh;
-    padding-top: 1vh;
 }
 
 footer ul {
@@ -76,12 +72,6 @@ footer ul {
     display: flex;
     flex-flow: column;
     align-items: center;
-}
-
-footer ul a {
-    width: fit-content;
-    color: white;
-    text-decoration: none;
 }
 
 footer ul li{

@@ -113,4 +113,17 @@ p{
     margin: 0 auto;
 }
 
+
+@media (min-width: 700px) {
+
+    .multiImageContainer__1, .multiImageContainer__2, .multiImageContainer__3 {
+        text-align: center;
+        padding-bottom: 10px;
+        height: 380px;
+        max-height: 380px;
+    }
+
+
+}
+
 </style>
