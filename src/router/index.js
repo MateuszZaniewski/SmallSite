@@ -30,10 +30,15 @@ const routes = [
     path: '/contact',
     name: 'contact',
     component: ContactView
+  },
+  {
+    path: '/:catchAll(.*)',
+    component: HomeView
   }
 ]
 
 const router = createRouter({
+  mode: 'hash',
   history: createWebHistory(process.env.BASE_URL),
   routes
 })
