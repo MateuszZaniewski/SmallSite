@@ -7,10 +7,10 @@
       <router-link to="/"><img @click="displayHomePage" id="mainLogo" :src="logoPath"></router-link>
         <div :class="{ 'menu-open' : isToggled}" class="headerListArea">
           <ul class="headerList">
-            <router-link to="/about"><li>O nas</li></router-link>
-            <router-link to="/collection"><li>Kolekcja</li></router-link>
-            <router-link to="/onlinestore"><li>Sklep Online</li></router-link>
-            <router-link to="/contact"><li>Kontakt</li></router-link>
+            <router-link to="/about"><li @click="setBackgroundtoScroll">O nas</li></router-link>
+            <router-link to="/collection"><li @click="setBackgroundtoScroll">Kolekcja</li></router-link>
+            <router-link to="/onlinestore"><li @click="setBackgroundtoScroll">Sklep Online</li></router-link>
+            <router-link to="/contact"><li @click="setBackgroundtoScroll">Kontakt</li></router-link>
           </ul>
         </div>
     </div>
@@ -18,10 +18,10 @@
   <img id="ramka" :src="ramkaPath">
   <div v-if="isToggled" class="slidingMenu">
     <ul>
-      <router-link to="/about"><li>O nas</li></router-link>
-      <router-link to="/collection"><li>Kolekcja</li></router-link>
-      <router-link to="/onlinestore"><li >Sklep Online</li></router-link>
-      <router-link to="/contact"><li>Kontakt</li></router-link>
+      <router-link to="/about"><li @click="setBackgroundtoScroll">O nas</li></router-link>
+      <router-link to="/collection"><li @click="setBackgroundtoScroll">Kolekcja</li></router-link>
+      <router-link to="/onlinestore"><li @click="setBackgroundtoScroll" >Sklep Online</li></router-link>
+      <router-link to="/contact"><li @click="setBackgroundtoScroll">Kontakt</li></router-link>
     </ul>
   </div>
 </template>
@@ -50,6 +50,11 @@ export default {
       this.isToggled = !this.isToggled
       document.body.style.overflow == 'hidden' ? document.body.style.overflow = 'scroll' : document.body.style.overflow = 'hidden'
     },
+    setBackgroundtoScroll() {
+      if(document.body.style.overflow == 'hidden'){
+        document.body.style.overflow = 'scroll'
+      }
+    }
   },
   mounted() {
     
