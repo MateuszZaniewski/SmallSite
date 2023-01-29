@@ -23,12 +23,12 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-  max-width: 1280px;
+  max-width: 1500px;
   margin: 0 auto;
   line-height: 25px;
 }
 body{
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 }
 </style>

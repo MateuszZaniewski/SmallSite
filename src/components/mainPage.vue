@@ -87,6 +87,8 @@
     padding-bottom: 10px;
     height: 470px;
     max-height: 470px;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .heroImageContainer {

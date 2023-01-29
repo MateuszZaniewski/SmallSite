@@ -81,18 +81,10 @@
     gap: 10px;
 }
 
-.multiImageContainer__1, .multiImageContainer__2, .multiImageContainer__3 {
-    width: 33%;
-    
-    
-}
-
 .heroImageContainer {
     height: 30vh;
     margin: 0 auto;
-    padding-top: 2vh;
-    
-
+    padding-top: 2vh;   
 }
 .heroImage{
     height: 100%;
