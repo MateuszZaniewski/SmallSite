@@ -26,11 +26,9 @@
     computed: {
     },
     setup(){
-      const width = window.innerWidth
-      
-    
+
       return {
-        width,
+        
       }
     },
     mounted() {

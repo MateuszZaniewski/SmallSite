@@ -12,8 +12,11 @@ export default {
   },
 
   data() {
+
     return {
-       db : collectionDB
+       db : collectionDB,
+
+       
     }
   },
   mounted() {
@@ -23,28 +26,26 @@ export default {
         
     },
   methods: {
-    
+
   },
   setup() {
-    
 
     return {
-        
+
     }
   }
 }
 </script>
 
 <template>
-    <h1>New Collection</h1>
+    <h1>Oferta</h1>
         <div id="collectionWrapper">
             <ul>
                 <li v-for="item in db.collection" v-bind:key="item">
                     <a class="collectionHref" href="#">
                         <div>
                             <img :src="item.img">
-                            <p>Model : {{item.name}}</p>
-                            <p>Typ : {{item.type}}</p>
+                            <p>{{item.name}}</p>
                         </div>
                     </a>
                 </li>
@@ -75,17 +76,24 @@ h1{
 }
 
 #collectionWrapper ul li {
-    width: 100%;
-    border-bottom: 1px solid rgb(215, 176, 111);
-    padding-bottom: 10px;
+    width: 45%;
+    padding: 1rem 0;
 }
 
 #collectionWrapper ul li div {
     text-align: center;
 }
 
+#collectionWrapper ul li div p {
+    margin: 0;
+    font-size: 0.7rem;
+    word-break: break-word;
+    text-decoration: none;
+    line-height: 1.3;
+}
+
 #collectionWrapper ul li div img {
-    width: 40%;
+    width: 100%;
 }
 
 .collectionHref{
@@ -117,7 +125,15 @@ h1{
     }
     
     #collectionWrapper ul li div img {
-        width: 100%;
+        width: 80%;
+    }
+
+    #collectionWrapper ul li div p {
+        margin: 0;
+        font-size: 1.2rem;
+        word-break: break-word;
+        text-decoration: none;
+        line-height: 1.5;
     }
 }
 

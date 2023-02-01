@@ -1,8 +1,9 @@
 <template>
     <MainHeader/>
     <div>
-      <onlineStore/>
+      <onlineStore :item="items"/>
     </div>
+    
     <FooterMain/>
   </template>
   
@@ -26,12 +27,19 @@
     },
     computed: {
     },
+    props: {
+        item : {
+            type: String
+        }
+    },
     setup(){
       const width = window.innerWidth
+      const items = ['Item1','Item2']
       
     
       return {
         width,
+        items
       }
     },
     mounted() {
