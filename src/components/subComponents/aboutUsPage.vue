@@ -27,11 +27,13 @@
     const sewingPath = require('../../assets/sewing.jpg')
     const opineoPath = require('../../assets/opineo.png')
     const laurPath = require('../../assets/laur.jpg')
+    const imagePath2 = require('../../assets/jakosc.jpg')
 
     return {
         sewingPath,
         opineoPath,
-        laurPath
+        laurPath,
+        imagePath2
     }
   }
 }
@@ -43,17 +45,19 @@
 <template>
     <div>
         <h1>O naszej firmie</h1>
-        <p>Nasza firma oferuje szeroką gamę wysokiej jakości bielizny damskiej i męskiej. Nasze produkty są         wykonane z najlepszych materiałów, dzięki czemu są trwałe, komfortowe i eleganckie.
+        <p>Nasza firma oferuje szeroką gamę wysokiej jakości bielizny damskiej i męskiej. Nasze produkty są         wykonane z najlepszych materiałów, dzięki czemu są trwałe, komfortowe i eleganckie.</p>
 
-        Nasze damskie produkty to m.in. staniki, figi, rajstopy, skarpety, itp. Dostępne są one w różnych rozmiarach, kolorach i fasonach, co pozwala na dopasowanie ich do indywidualnych potrzeb i gustów klientek. Natomiast w naszej ofercie dla mężczyzn znajdziesz skarpety, bieliznę termoaktywną, bokserki i slipy.
+        <p>Nasze damskie produkty to m.in. staniki, figi, rajstopy, skarpety, itp. Dostępne są one w różnych rozmiarach, kolorach i fasonach, co pozwala na dopasowanie ich do indywidualnych potrzeb i gustów klientek. Natomiast w naszej ofercie dla mężczyzn znajdziesz skarpety, bieliznę termoaktywną, bokserki i slipy.</p>
+        
+        <img :src="imagePath2">
+
+        <p>Jesteśmy przekonani, że nasza bielizna jest jedną z najlepszych na rynku. Przykładamy ogromną wagę do jakości naszych produktów, dlatego każdy z nich jest starannie przetestowany przed wprowadzeniem do sprzedaży.</p>
             
-        Jesteśmy przekonani, że nasza bielizna jest jedną z najlepszych na rynku. Przykładamy ogromną wagę do jakości naszych produktów, dlatego każdy z nich jest starannie przetestowany przed wprowadzeniem do sprzedaży.
+        <p>Naszym celem jest zapewnienie naszym klientom bielizny, która nie tylko będzie wyglądać dobrze, ale przede wszystkim będzie wygodna i trwała. Dlatego też, nasza bielizna jest idealna zarówno na co dzień jak i na specjalne okazje.
             
-        Naszym celem jest zapewnienie naszym klientom bielizny, która nie tylko będzie wyglądać dobrze, ale przede wszystkim będzie wygodna i trwała. Dlatego też, nasza bielizna jest idealna zarówno na co dzień jak i na specjalne okazje.
+        Warto wspomnieć, że dbamy o środowisko i zdrowie klientów, dlatego stosujemy ekologiczne rozwiązania przy produkcji naszych produktów.</p>
             
-        Warto wspomnieć, że dbamy o środowisko i zdrowie klientów, dlatego stosujemy ekologiczne rozwiązania przy produkcji naszych produktów.
-            
-        Jeśli szukasz bielizny, która spełni Twoje wymagania pod względem jakości, wygody i stylu, zapraszamy do zapoznania się z naszą ofertą. Jesteśmy przekonani, że każdy znajdzie coś dla siebie.</p>
+        <p>Jeśli szukasz bielizny, która spełni Twoje wymagania pod względem jakości, wygody i stylu, zapraszamy do zapoznania się z naszą ofertą. Jesteśmy przekonani, że każdy znajdzie coś dla siebie.</p>
         <div class="sewingWrapper">
             <img :src="sewingPath">
         </div>
@@ -61,11 +65,13 @@
         <br/>
         <p>Nasza firma jest dumna z uzyskanych nagród i wyróżnień od naszych klientów i branży. Uzyskaliśmy nagrodę za najlepszą jakość produktów oraz za innowacyjność. Cieszymy się, że nasza bielizna jest tak chętnie wybierana przez klientów, co potwierdza, że oferujemy produkty na najwyższym poziomie.
 
-        Nasza marka jest również doceniona przez klientów za styl i elegancję. Nasze produkty zdobyły wiele pozytywnych opinii i recenzji, co tylko potwierdza ich wysoką jakość.
+        Nasza marka jest również doceniona przez klientów za styl i elegancję. Nasze produkty zdobyły wiele pozytywnych opinii i recenzji, co tylko potwierdza ich wysoką jakość.</p>
             
+        <p>
         Jesteśmy bardzo dumni z uzyskanych przez nas nagród i wyróżnień, ponieważ są one dowodem na to, że nasza firma jest liderem w branży i że oferujemy produkty najwyższej jakości.
             
-        Jesteśmy wdzięczni za każde wyróżnienie i opinię, które otrzymujemy od naszych klientów, ponieważ pozwala nam to rozwijać naszą działalność i dostarczać jeszcze lepsze produkty.</p>
+        Jesteśmy wdzięczni za każde wyróżnienie i opinię, które otrzymujemy od naszych klientów, ponieważ pozwala nam to rozwijać naszą działalność i dostarczać jeszcze lepsze produkty.
+        </p>
         <div class="rewardsWrapper">
             <img class="rewards" :src="laurPath">
             <img class="rewards" :src="opineoPath">

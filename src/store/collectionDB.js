@@ -42,6 +42,40 @@ export default {
             img: require('../store/database/Vivisence_1025.jpg'),
         }
 
+    },
+    nightwear : {
+        item1 : {
+            name: 'Natalie 2001 Koszula nocna, różowa',
+            img: require('../store/database/Natalie_2001.jpg')
+        },
+        item2 : {
+            name: 'Naomi 2002 Koszula nocna, różowa',
+            img: require('../store/database/Naomi_2002.jpg')
+        },
+        item3 : {
+            name: 'Amy 2003 Koszula nocna, ecru',
+            img: require('../store/database/Amy_2003.jpg')
+        },
+        item4 : {
+            name: 'Amy 2003 Koszula nocna, granatowa',
+            img: require('../store/database/Amy_2003-1.jpg')
+        },
+        item5 : {
+            name: 'Cherie 2004 Koszula nocna, czerwona',
+            img: require('../store/database/Cherie_2004.jpg')
+        },
+        item6 : {
+            name: 'Emily 2005 Koszula nocna, biała',
+            img: require('../store/database/Emily_2005.jpg')
+        },
+        item7 : {
+            name: 'Livia 2006 Koszula nocna, fioletowa',
+            img: require('../store/database/Livia_2006.jpg')
+        },
+        item8 : {
+            name: 'Livia 2006 Koszula nocna, kremowa',
+            img: require('../store/database/Livia_2006-1.jpg')
+        }
     }
         
     }

@@ -14,9 +14,7 @@ export default {
   data() {
 
     return {
-       db : collectionDB,
-
-       
+       db : collectionDB,   
     }
   },
   mounted() {
@@ -40,6 +38,7 @@ export default {
 <template>
     <h1>Oferta</h1>
         <div id="collectionWrapper">
+            <h2>Bielizna</h2>
             <ul>
                 <li v-for="item in db.collection" v-bind:key="item">
                     <a class="collectionHref" href="#">
@@ -50,8 +49,17 @@ export default {
                     </a>
                 </li>
             </ul>
-
-
+            <h2>Koszule nocne</h2>
+            <ul>
+                <li v-for="shirt in db.nightwear" v-bind:key="shirt">
+                    <a class="collectionHref" href="#">
+                        <div>
+                            <img :src="shirt.img">
+                            <p>{{shirt.name}}</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
         </div>
 </template>
 
@@ -99,6 +107,10 @@ h1{
 .collectionHref{
     text-decoration: none;
     color: black;
+}
+
+h2 {
+    text-align: center;
 }
 
 @media (min-width: 700px){
