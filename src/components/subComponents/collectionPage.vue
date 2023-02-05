@@ -14,7 +14,10 @@ export default {
   data() {
 
     return {
-       db : collectionDB,   
+       db : collectionDB,
+       showSection1: true,
+       showSection2: true,
+       showSection3: true,
     }
   },
   mounted() {
@@ -36,10 +39,30 @@ export default {
 </script>
 
 <template>
-    <h1>Oferta</h1>
+    <div class="filterBox">
+        <button 
+        @click="showSection1 = true, showSection2 = true, showSection3 = true"
+        id="showAll"
+        >Pokaż wszystko</button>
+        <button 
+        @click="showSection1 = true, showSection2 = false, showSection3 = false"
+        :class="showSection1 ? 'open' : 'closed'"
+        id="bielizna"
+        >Bielizna</button>
+        <button 
+        @click="showSection1 = false, showSection2 = true, showSection3 = false"
+        :class="showSection2 ? 'open' : 'closed'"
+        id="koszule"
+        >Koszule nocne</button>
+        <button 
+        @click="showSection1 = false, showSection2 = false, showSection3 = true"
+        :class="showSection3 ? 'open' : 'closed'"
+        id="stroje"
+        >Stroje kąpielowe</button>
+    </div>
         <div id="collectionWrapper">
-            <h2>Bielizna</h2>
-            <ul>
+            <h2 v-if="showSection1">Bielizna</h2>
+            <ul v-if="showSection1">
                 <li v-for="item in db.collection" v-bind:key="item">
                     <a class="collectionHref" href="#">
                         <div>
@@ -49,8 +72,8 @@ export default {
                     </a>
                 </li>
             </ul>
-            <h2>Koszule nocne</h2>
-            <ul>
+            <h2 v-if="showSection2">Koszule nocne</h2>
+            <ul v-if="showSection2">
                 <li v-for="shirt in db.nightwear" v-bind:key="shirt">
                     <a class="collectionHref" href="#">
                         <div>
@@ -60,6 +83,8 @@ export default {
                     </a>
                 </li>
             </ul>
+            <h2 v-if="showSection3">Stroje kąpielowe</h2>
+            <ul v-if="showSection3"></ul>
         </div>
 </template>
 
@@ -111,6 +136,29 @@ h1{
 
 h2 {
     text-align: center;
+}
+
+.filterBox {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 90%;
+    margin: 0 auto;
+    
+}
+
+.open{
+    background-color: rgb(243, 209, 151);
+    border: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.closed{
+    background-color: rgb(240, 237, 233);
+    border: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
 }
 
 @media (min-width: 700px){

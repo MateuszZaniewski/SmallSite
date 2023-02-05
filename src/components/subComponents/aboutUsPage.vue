@@ -49,7 +49,10 @@
 
         <p>Nasze damskie produkty to m.in. staniki, figi, rajstopy, skarpety, itp. Dostępne są one w różnych rozmiarach, kolorach i fasonach, co pozwala na dopasowanie ich do indywidualnych potrzeb i gustów klientek. Natomiast w naszej ofercie dla mężczyzn znajdziesz skarpety, bieliznę termoaktywną, bokserki i slipy.</p>
         
-        <img :src="imagePath2">
+        <div class="sewingWrapper">
+            <img :src="imagePath2">
+        </div>
+        
 
         <p>Jesteśmy przekonani, że nasza bielizna jest jedną z najlepszych na rynku. Przykładamy ogromną wagę do jakości naszych produktów, dlatego każdy z nich jest starannie przetestowany przed wprowadzeniem do sprzedaży.</p>
             
