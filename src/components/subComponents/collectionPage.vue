@@ -18,6 +18,7 @@ export default {
        showSection1: true,
        showSection2: true,
        showSection3: true,
+       checked: false,
     }
   },
   mounted() {
@@ -39,27 +40,35 @@ export default {
 </script>
 
 <template>
-    <div class="filterBox">
-        <button 
-        @click="showSection1 = true, showSection2 = true, showSection3 = true"
-        id="showAll"
-        >Pokaż wszystko</button>
-        <button 
-        @click="showSection1 = true, showSection2 = false, showSection3 = false"
-        :class="showSection1 ? 'open' : 'closed'"
-        id="bielizna"
-        >Bielizna</button>
-        <button 
-        @click="showSection1 = false, showSection2 = true, showSection3 = false"
-        :class="showSection2 ? 'open' : 'closed'"
-        id="koszule"
-        >Koszule nocne</button>
-        <button 
-        @click="showSection1 = false, showSection2 = false, showSection3 = true"
-        :class="showSection3 ? 'open' : 'closed'"
-        id="stroje"
-        >Stroje kąpielowe</button>
+    <div class="showFilterBox">
+        <div class="checkbox">
+            <span>Pokaż filtry</span>
+            <input type="checkbox" v-model="checked">
+        </div>
+        <div v-if="checked" class="filterBox">
+            <button 
+            @click="showSection1 = true, showSection2 = true, showSection3 = true"
+            :class="showSection1 && showSection2 && showSection3 ? 'open' : 'closed' "
+            id="showAll"
+            >Pokaż wszystko</button>
+            <button 
+            @click="showSection1 = true, showSection2 = false, showSection3 = false"
+            :class="showSection1 ? 'open' : 'closed'"
+            id="bielizna"
+            >Bielizna</button>
+            <button 
+            @click="showSection1 = false, showSection2 = true, showSection3 = false"
+            :class="showSection2 ? 'open' : 'closed'"
+            id="koszule"
+            >Koszule nocne</button>
+            <button 
+            @click="showSection1 = false, showSection2 = false, showSection3 = true"
+            :class="showSection3 ? 'open' : 'closed'"
+            id="stroje"
+            >Stroje kąpielowe</button>
+        </div>
     </div>
+    
         <div id="collectionWrapper">
             <h2 v-if="showSection1">Bielizna</h2>
             <ul v-if="showSection1">
@@ -84,7 +93,16 @@ export default {
                 </li>
             </ul>
             <h2 v-if="showSection3">Stroje kąpielowe</h2>
-            <ul v-if="showSection3"></ul>
+            <ul v-if="showSection3">
+                <li v-for="swimmwear in db.swimmwear" v-bind:key="swimmwear">
+                    <a class="collectionHref" href="#">
+                        <div>
+                            <img :src="swimmwear.img">
+                            <p>{{swimmwear.name}}</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
         </div>
 </template>
 
@@ -148,17 +166,35 @@ h2 {
 }
 
 .open{
-    background-color: rgb(243, 209, 151);
+    background-color: rgb(240, 188, 100);
     border: none;
     padding: 0.25rem 0.5rem;
     border-radius: 0.5rem;
 }
 
 .closed{
-    background-color: rgb(240, 237, 233);
+    background-color: rgb(243, 209, 151);
     border: none;
     padding: 0.25rem 0.5rem;
     border-radius: 0.5rem;
+}
+
+.checkbox {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+
+.checkbox input {
+    height: 20px;
+    width: 20px;
+}
+
+  input[type="checkbox"] {
+    accent-color: rgb(243, 209, 151);  
 }
 
 @media (min-width: 700px){
@@ -194,6 +230,13 @@ h2 {
         word-break: break-word;
         text-decoration: none;
         line-height: 1.5;
+    }
+
+    .filterBox button {
+        font-size: 1rem;
+    }
+    .checkbox{
+        font-size: 1.2rem;
     }
 }
 

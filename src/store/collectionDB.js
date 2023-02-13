@@ -76,6 +76,41 @@ export default {
             name: 'Livia 2006 Koszula nocna, kremowa',
             img: require('../store/database/Livia_2006-1.jpg')
         }
+    },
+    swimmwear: {
+        item1 : {
+            name: 'Vivisence 3209, dwóczęściowy, niebieski',
+            img: require('../store/database/Vivisence_3209.jpg')
+        },
+        item2 : {
+            name: 'Vivisence 3209, dwóczęściowy, czarny',
+            img: require('../store/database/Vivisence_3209-1.jpg') 
+        },
+        item3 : {
+            name: 'Vivisence 3209, dwóczęściowy, różowy',
+            img:  require('../store/database/Vivisence_3209-2.jpg')
+        },
+        item4 : {
+            name: 'Vivisence 3209, dwóczęściowy, morski',
+            img:  require('../store/database/Vivisence_3209-3.jpg')
+        },
+        item5 : {
+            name: 'Vivisence 3207, dwóczęściowy, czarny',
+            img:  require('../store/database/Vivisence_3207.jpg')
+        },
+        item6 : {
+            name: 'Vivisence 3207, dwóczęściowy, czerwony',
+            img:  require('../store/database/Vivisence_3207-1.jpg')
+        },
+        item7 : {
+            name: 'Vivisence 3001, dwóczęściowy, kropki',
+            img:  require('../store/database/Vivisence_3001.jpg')
+        },
+        item8 : {
+            name: 'Vivisence 3101, jednoczęściowy, paski',
+            img:  require('../store/database/Vivisence_3101.jpg')
+        },
+
     }
         
     }

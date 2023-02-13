@@ -85,14 +85,14 @@
 .multiImageContainer__1, .multiImageContainer__2, .multiImageContainer__3 {
     text-align: center;
     padding-bottom: 10px;
-    height: 470px;
-    max-height: 470px;
+    height: 480px;
+    max-height: 480px;
     width: 90%;
     margin: 0 auto;
 }
 
 .heroImageContainer {
-    width: 80%;
+    width: 100%;
     height: 200px;
     margin: 0 auto;
     padding-top: 5px;
@@ -104,7 +104,6 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
-    border-radius: 0.2rem;
     max-width: 1200px;
     max-height: 600px;
 }

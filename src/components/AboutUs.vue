@@ -74,7 +74,7 @@
 <style scoped>
 
 .aboutUsWrapper{
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
 }
@@ -91,11 +91,12 @@
 
 .aboutUsSection1, .aboutUsSection2, .aboutUsSection3 {
     margin: 0 auto;
+    width: 90%;
 }
 
 .workImage{
     max-width: 850px;
-    width: 90%;
+    width: 100%;
     max-height: 450px;
     margin: 0 auto 2vh auto;
 }
