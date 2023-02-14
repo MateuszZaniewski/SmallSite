@@ -81,12 +81,15 @@
 
 <style scoped>
 
+h1 {
+    line-height: 35px;
+}
 
 .multiImageContainer__1, .multiImageContainer__2, .multiImageContainer__3 {
     text-align: center;
     padding-bottom: 10px;
-    height: 480px;
-    max-height: 480px;
+    height: 520px;
+    max-height: 520px;
     width: 90%;
     margin: 0 auto;
 }

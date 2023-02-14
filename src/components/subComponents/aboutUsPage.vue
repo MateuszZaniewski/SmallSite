@@ -43,7 +43,7 @@
 
 
 <template>
-    <div>
+    <div class="aboutUsWrapper">
         <h1>O naszej firmie</h1>
         <p>Nasza firma oferuje szeroką gamę wysokiej jakości bielizny damskiej i męskiej. Nasze produkty są         wykonane z najlepszych materiałów, dzięki czemu są trwałe, komfortowe i eleganckie.</p>
 
@@ -90,9 +90,15 @@ h1{
     text-align: center;
 }
 
-div{
+.aboutUsWrapper{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.aboutUsWrapper p {
     width: 90%;
     margin: 0 auto;
+    padding: 0.5rem 0;
 }
 .sewingWrapper{
     margin: 0 auto;
@@ -105,7 +111,7 @@ img{
     height: 100%;
     width: 100%;
     object-fit: cover;
-    max-height: 400px;
+    max-height: 250px;
     max-width: 800px;
 }
 
@@ -124,5 +130,15 @@ img{
     max-height: 200px;
     max-width: 200px;
 
+}
+
+@media screen and (min-width : 800px) {
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        max-height: 400px;
+        max-width: 800px;
+    }
 }
 </style>
