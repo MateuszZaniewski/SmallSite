@@ -21,6 +21,9 @@ export default {
        checked: false,
     }
   },
+  computed: {
+    
+  },
   mounted() {
     
   },
@@ -68,7 +71,6 @@ export default {
             >Stroje kąpielowe</button>
         </div>
     </div>
-    
         <div id="collectionWrapper">
             <h2 v-if="showSection1">Bielizna</h2>
             <ul v-if="showSection1">
@@ -166,7 +168,7 @@ h2 {
 }
 
 .open{
-    background-color: rgb(240, 188, 100);
+    background-color: #f0bc64;
     border: none;
     padding: 0.25rem 0.5rem;
     border-radius: 0.5rem;
@@ -195,6 +197,11 @@ h2 {
 
   input[type="checkbox"] {
     accent-color: rgb(243, 209, 151);  
+}
+
+.filterBox__search input {
+    border: 1px solid #f0bc64;
+    padding: 0.25rem 0.5rem;
 }
 
 @media (min-width: 700px){

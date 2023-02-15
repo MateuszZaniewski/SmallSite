@@ -44,7 +44,7 @@
 </script>
 
 <template> 
-    <img id="ramka" :src="ramkaPath">
+    
     <footer> 
         <div class="footerLinks">
             <ul>
@@ -80,6 +80,7 @@
 footer{
     padding-bottom: 1.5vh;
     padding-top: 1vh;
+    border-top: 1px double #d49c3a;
     display: flex;
     flex-flow: row;
     justify-content: space-around;
@@ -96,7 +97,7 @@ footer ul {
 
 footer ul a {
     width: fit-content;
-    color: #d49c3a;
+    color: black;
     text-decoration: none;
     
 }
@@ -108,6 +109,7 @@ footer ul li{
 footer ul li:hover {
     scale: 1.1;
     cursor: pointer;
+    color: #d49c3a;
 }
 
 .footerSocials img{

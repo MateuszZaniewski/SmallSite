@@ -87,7 +87,7 @@ h1 {
 
 .multiImageContainer__1, .multiImageContainer__2, .multiImageContainer__3 {
     text-align: center;
-    padding-bottom: 10px;
+    padding: 10px 0;
     height: 520px;
     max-height: 520px;
     width: 90%;
@@ -122,7 +122,7 @@ p{
 
     .multiImageContainer__1, .multiImageContainer__2, .multiImageContainer__3 {
         text-align: center;
-        padding-bottom: 10px;
+        padding: 10px 0;
         height: 380px;
         max-height: 380px;
     }

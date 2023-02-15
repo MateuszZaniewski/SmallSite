@@ -15,7 +15,6 @@
         </div>
     </div>
   </div>
-  <img id="ramka" :src="ramkaPath">
   <div v-if="isToggled" class="slidingMenu">
     <ul>
       <router-link to="/about"><li @click="setBackgroundtoScroll">O nas</li></router-link>
@@ -82,6 +81,8 @@ export default {
 .headerWrapper{
   margin-top: 2vh;
   display: flex;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px double #d49c3a;
 }
 
 .wrapper{
@@ -191,7 +192,7 @@ export default {
 .slidingMenu ul li {
   padding: 10px 0;
   text-align: center;
-  border-bottom: 1px solid rgb(212, 156, 58);
+  border-bottom: 1px solid #d49c3a;
   font-weight: bold;
 }
 
