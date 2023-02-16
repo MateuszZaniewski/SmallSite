@@ -19,6 +19,8 @@ export default {
        showSection2: true,
        showSection3: true,
        checked: false,
+       details : false,
+       selectedItemIndex: null
     }
   },
   computed: {
@@ -31,7 +33,14 @@ export default {
         
     },
   methods: {
-
+    displayDetails() {
+        console.log('Elko')
+        this.details = !this.details
+        console.log(this.details)
+    },
+    showDetails(item) {
+      this.selectedItem = item;
+    }
   },
   setup() {
 
@@ -74,37 +83,52 @@ export default {
         <div id="collectionWrapper">
             <h2 v-if="showSection1">Bielizna</h2>
             <ul v-if="showSection1">
-                <li v-for="item in db.collection" v-bind:key="item">
-                    <a class="collectionHref" href="#">
+                <li v-for="(item, key) in db.collection" v-bind:key="key" @click="selectedItemIndex = key">
+                    
                         <div>
-                            <img :src="item.img">
+                            <img  :src="item.img">
                             <p>{{item.name}}</p>
+                            <button>Więcej</button>
+                           
                         </div>
-                    </a>
+
+                        <div v-if="selectedItemIndex !== null">
+                            <p>{{ db.collection[key].details }}</p>
+                        </div>
+
+                        
+                        
                 </li>
             </ul>
+
             <h2 v-if="showSection2">Koszule nocne</h2>
             <ul v-if="showSection2">
                 <li v-for="shirt in db.nightwear" v-bind:key="shirt">
-                    <a class="collectionHref" href="#">
+                    
                         <div>
                             <img :src="shirt.img">
                             <p>{{shirt.name}}</p>
+                            <button @click="displayDetails">Więcej</button>
                         </div>
-                    </a>
+                    
                 </li>
             </ul>
             <h2 v-if="showSection3">Stroje kąpielowe</h2>
             <ul v-if="showSection3">
                 <li v-for="swimmwear in db.swimmwear" v-bind:key="swimmwear">
-                    <a class="collectionHref" href="#">
+                    
                         <div>
                             <img :src="swimmwear.img">
                             <p>{{swimmwear.name}}</p>
+                            <button @click="displayDetails">Więcej</button>
                         </div>
-                    </a>
+                    
                 </li>
             </ul>
+        </div>
+
+        <div class="detailsWrapper">
+
         </div>
 </template>
 

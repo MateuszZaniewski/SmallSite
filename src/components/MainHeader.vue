@@ -9,7 +9,6 @@
           <ul class="headerList">
             <router-link to="/about"><li @click="setBackgroundtoScroll">O nas</li></router-link>
             <router-link to="/collection"><li @click="setBackgroundtoScroll">Kolekcja</li></router-link>
-            <router-link to="/onlinestore"><li @click="setBackgroundtoScroll">Sklep Online</li></router-link>
             <router-link to="/contact"><li @click="setBackgroundtoScroll">Kontakt</li></router-link>
           </ul>
         </div>
@@ -19,7 +18,6 @@
     <ul>
       <router-link to="/about"><li @click="setBackgroundtoScroll">O nas</li></router-link>
       <router-link to="/collection"><li @click="setBackgroundtoScroll">Kolekcja</li></router-link>
-      <router-link to="/onlinestore"><li @click="setBackgroundtoScroll" >Sklep Online</li></router-link>
       <router-link to="/contact"><li @click="setBackgroundtoScroll">Kontakt</li></router-link>
     </ul>
   </div>

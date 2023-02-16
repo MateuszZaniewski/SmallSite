@@ -50,7 +50,6 @@
             <ul>
                 <router-link to="/about"><li>O nas</li></router-link>
                 <router-link to="/collection"><li>Kolekcja</li></router-link>
-                <router-link to="/onlinestore"><li>Sklep Online</li></router-link>
                 <router-link to="/contact"><li>Kontakt</li></router-link>
             </ul> 
         </div>
