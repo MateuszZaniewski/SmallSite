@@ -19,8 +19,7 @@ export default {
        showSection2: true,
        showSection3: true,
        checked: false,
-       details : false,
-       selectedItemIndex: null
+       show: false
     }
   },
   computed: {
@@ -33,13 +32,8 @@ export default {
         
     },
   methods: {
-    displayDetails() {
-        console.log('Elko')
-        this.details = !this.details
-        console.log(this.details)
-    },
-    showDetails(item) {
-      this.selectedItem = item;
+    showDets() {
+        this.show != this.show
     }
   },
   setup() {
@@ -83,21 +77,19 @@ export default {
         <div id="collectionWrapper">
             <h2 v-if="showSection1">Bielizna</h2>
             <ul v-if="showSection1">
-                <li v-for="(item, key) in db.collection" v-bind:key="key" @click="selectedItemIndex = key">
+                <li v-for="(item) in db.collection" v-bind:key="item" @click="showDetails">
                     
                         <div>
                             <img  :src="item.img">
                             <p>{{item.name}}</p>
-                            <button>Więcej</button>
-                           
+                            <button @click="showDets">Więcej</button>
                         </div>
 
-                        <div v-if="selectedItemIndex !== null">
-                            <p>{{ db.collection[key].details }}</p>
+                        <div v-if="show">
+                            <li v-for="det in item.details" v-bind:key="det">
+                                <p>{{det}}</p>
+                            </li>
                         </div>
-
-                        
-                        
                 </li>
             </ul>
 
