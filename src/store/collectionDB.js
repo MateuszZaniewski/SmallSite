@@ -1,26 +1,31 @@
 export default {
     collection : {
         item1 : {
+            id: 'item1',
             name: 'Olivia 1005 Biustonosz usztywniany, beżowy',
             type: 'Komplet',
             img: require('../store/database/olivia_1005.jpg'),
             details : {
-                1: 'xD',
-                2: 'dX',
-                3: 'YY'
+                opis : 'The most stunning womens bra with padded cups and metal wires. Upper cup, back and front gore made of shiny microfibre. Cups decorated with the most beautiful, subtle lacy embroideries.Regulated, not separable straps come in different widths (depending on a size). Side seam boning.Three sets of two hook and eye back closure. Subtle bows placed between the cups and on the straps add extra charm. Seductive v-neck effect combined with great shaping and support – all you can expect from a bra! Matching Olivia 1005 briefs available in beige colour only.',
+                colors : 'Available colours: beige',
+                sklad : 'Composition: 68% polyamide, 16% cotton, 12% elastane, 4% other fabrics',
+                pranie : 'Washing: Handwash only, Do not Dry Clean, Do not bleach, Do not iron, Do not Tumble dry.'
             }
         },
         item2 : {
+            id: 'item2',
             name: 'Elise 1003 Biustonosz półusztywniany, beżowy',
             type: 'Komplet',
             img: require('../store/database/Elise_1003.jpg'),
             details : {
-                1: 'xD',
-                2: 'dX',
-                3: 'YY'
+                opis : 'The most stunning womens bra with padded cups and metal wires. Upper cup, back and front gore made of shiny microfibre. Cups decorated with the most beautiful, subtle lacy embroideries.Regulated, not separable straps come in different widths (depending on a size). Side seam boning.Three sets of two hook and eye back closure. Subtle bows placed between the cups and on the straps add extra charm. Seductive v-neck effect combined with great shaping and support – all you can expect from a bra! Matching Olivia 1005 briefs available in beige colour only.',
+                colors : 'Available colours: beige',
+                sklad : 'Composition: 68% polyamide, 16% cotton, 12% elastane, 4% other fabrics',
+                pranie : 'Washing: Handwash only, Do not Dry Clean, Do not bleach, Do not iron, Do not Tumble dry.'
             }
         },
         item3 : {
+            id: 'item3',
             name: 'Melanie 1007 Biustonosz usztywniany, beżowy',
             type: 'Komplet',
             img: require('../store/database/Melanie_1007.jpg'),
@@ -31,6 +36,7 @@ export default {
             }
         },
         item4 : {
+            id: 'item4',
             name: 'Jennifer 1013 Biustonosz półusztywniany, biały',
             type: 'Komplet',
             img: require('../store/database/Jennifer_1013.jpg'),
@@ -41,6 +47,7 @@ export default {
             }
         },
         item5 : {
+            id: 'item5',
             name: 'Juliet 1004 Biustonosz usztywniany, beżowy',
             type: 'Komplet',
             img: require('../store/database/Juliet_1004.jpg'),
@@ -51,6 +58,7 @@ export default {
             }
         },
         item6 : {
+            id: 'item6',
             name: 'Jasmine 1009 Biustonosz usztywniany, biały',
             type: 'Komplet',
             img: require('../store/database/Jasmine_1009.jpg'),
@@ -61,6 +69,7 @@ export default {
             }
         },
         item7 : {
+            id: 'item7',
             name: 'Lily 1014 Biustonosz usztywniany, wrzosowy',
             type: 'Komplet',
             img: require('../store/database/Lily_1014.jpg'),
@@ -71,6 +80,7 @@ export default {
             }
         },
         item8 : {
+            id: 'item8',
             name: 'Vivisence 1025 Biustonosz usztywniany, granatowy',
             type: 'Komplet',
             img: require('../store/database/Vivisence_1025.jpg'),

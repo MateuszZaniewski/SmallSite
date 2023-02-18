@@ -12,6 +12,7 @@ export default {
   },
 
   data() {
+    const scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop
 
     return {
        db : collectionDB,
@@ -19,7 +20,8 @@ export default {
        showSection2: true,
        showSection3: true,
        checked: false,
-       show: false
+       isToggled : false,
+       scrollTop,
     }
   },
   computed: {
@@ -32,9 +34,19 @@ export default {
         
     },
   methods: {
-    showDets() {
-        this.show != this.show
-    }
+    showDets(Event, index) {
+        console.log(document.documentElement.scrollTop)
+        let scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop
+        console.log(scrollTop)
+        document.getElementsByClassName(`${index}`)[0].classList.toggle("hide");
+        document.getElementsByClassName(`${index}`)[0].style.top = scrollTop + 'px'
+        this.isToggled = !this.isToggled
+        
+    },
+    toggleDetails() {
+      
+      
+    },
   },
   setup() {
 
@@ -46,7 +58,7 @@ export default {
 </script>
 
 <template>
-    <div class="showFilterBox">
+    <div v-if="!isToggled" class="showFilterBox">
         <div class="checkbox">
             <span>Pokaż filtry</span>
             <input type="checkbox" v-model="checked">
@@ -74,22 +86,33 @@ export default {
             >Stroje kąpielowe</button>
         </div>
     </div>
-        <div id="collectionWrapper">
+        <div  id="collectionWrapper">
             <h2 v-if="showSection1">Bielizna</h2>
             <ul v-if="showSection1">
-                <li v-for="(item) in db.collection" v-bind:key="item" @click="showDetails">
+                <li v-for="(item, index) in db.collection" v-bind:key="item">
                     
-                        <div>
+                        <div :id="index">
                             <img  :src="item.img">
                             <p>{{item.name}}</p>
-                            <button @click="showDets">Więcej</button>
+                            <button @click="showDets(Event,index)">Zobacz</button>
+
+                            <div :class="index" class="hide productDetails">
+                                <button @click="showDets(Event,index)">Zamknij</button>
+                                <div class="details__Image">
+                                    <img :src="item.img">
+                                </div>
+                                
+                                <div class="details__info">
+                                    <p>Nazwa produktu : {{item.name}}</p>
+                                    <p>Opis produktu : {{item.details.opis}}</p>
+                                    <p>Dostępne kolory : {{item.details.colors}}</p>
+                                    <p>Skład produktu : {{item.details.sklad}}</p>
+                                    <p>Informacje o praniu : {{item.details.pranie}}</p>
+                                </div>
+                            </div>
                         </div>
 
-                        <div v-if="show">
-                            <li v-for="det in item.details" v-bind:key="det">
-                                <p>{{det}}</p>
-                            </li>
-                        </div>
+                        
                 </li>
             </ul>
 
@@ -118,13 +141,40 @@ export default {
                 </li>
             </ul>
         </div>
-
-        <div class="detailsWrapper">
-
-        </div>
 </template>
 
 <style scoped>
+
+.show {
+    display: flex;
+    flex-flow: column;
+}
+
+.hide {
+    display: none;
+}
+
+.productDetails{
+    position: absolute;
+    background: rgb(161, 235, 161);
+    left: 0;
+    width: 100%;
+}
+
+.details__Image {
+    max-height: 400px;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 1vh;
+}
+.details__Image img{
+    max-height: 400px;
+
+}
+
+.details__info p{
+    padding-bottom: 1vh;
+}
 
 h1{
     text-align: center;
