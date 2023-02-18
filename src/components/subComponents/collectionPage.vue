@@ -13,7 +13,6 @@ export default {
 
   data() {
     const scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop
-
     return {
        db : collectionDB,
        showSection1: true,
@@ -35,17 +34,11 @@ export default {
     },
   methods: {
     showDets(Event, index) {
-        console.log(document.documentElement.scrollTop)
-        let scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop
-        console.log(scrollTop)
+
         document.getElementsByClassName(`${index}`)[0].classList.toggle("hide");
-        document.getElementsByClassName(`${index}`)[0].style.top = scrollTop + 'px'
         this.isToggled = !this.isToggled
+        document.body.style.overflow == 'hidden' ? document.body.style.overflow = 'scroll' : document.body.style.overflow = 'hidden'
         
-    },
-    toggleDetails() {
-      
-      
     },
   },
   setup() {
@@ -96,20 +89,23 @@ export default {
                             <p>{{item.name}}</p>
                             <button @click="showDets(Event,index)">Zobacz</button>
 
-                            <div :class="index" class="hide productDetails">
-                                <button @click="showDets(Event,index)">Zamknij</button>
-                                <div class="details__Image">
-                                    <img :src="item.img">
-                                </div>
-                                
-                                <div class="details__info">
-                                    <p>Nazwa produktu : {{item.name}}</p>
-                                    <p>Opis produktu : {{item.details.opis}}</p>
-                                    <p>Dostępne kolory : {{item.details.colors}}</p>
-                                    <p>Skład produktu : {{item.details.sklad}}</p>
-                                    <p>Informacje o praniu : {{item.details.pranie}}</p>
+                            <div class="scrollableContainer">
+                                <div :class="index" class="hide productDetails">
+                                    <button @click="showDets(Event,index)">Zamknij</button>
+                                    <div class="details__Image">
+                                        <img :src="item.img">
+                                    </div>
+                                    
+                                    <div class="details__info">
+                                        <p>Nazwa produktu : {{item.name}}</p>
+                                        <p>Opis produktu : {{item.details.opis}}</p>
+                                        <p>Dostępne kolory : {{item.details.colors}}</p>
+                                        <p>Skład produktu : {{item.details.sklad}}</p>
+                                        <p>Informacje o praniu : {{item.details.pranie}}</p>
+                                    </div>
                                 </div>
                             </div>
+                            
                         </div>
 
                         
@@ -145,20 +141,23 @@ export default {
 
 <style scoped>
 
-.show {
-    display: flex;
-    flex-flow: column;
-}
-
 .hide {
     display: none;
+}
+
+.scrollableContainer{
+    max-height: 100%;
+    overflow-x: scroll;
 }
 
 .productDetails{
     position: absolute;
     background: rgb(161, 235, 161);
     left: 0;
+    top: 0;
     width: 100%;
+    z-index: 999;
+    overflow-x: scroll;
 }
 
 .details__Image {

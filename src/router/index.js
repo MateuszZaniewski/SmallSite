@@ -32,6 +32,11 @@ const routes = [
     component: ContactView
   },
   {
+    path: '/collection/product',
+    name: '/collection/product',
+    component : CollectionView
+  },
+  {
     path: '/:catchAll(.*)',
     component: HomeView
   }
