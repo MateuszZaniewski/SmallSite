@@ -5,7 +5,7 @@ import collectionDB from '../../store/collectionDB.js'
 export default {
   name: 'CollectionPage',
   props: {
-    
+
   },
   components: {
 
@@ -13,6 +13,7 @@ export default {
 
   data() {
     const scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop
+
     return {
        db : collectionDB,
        showSection1: true,
@@ -87,6 +88,15 @@ export default {
                         <div :id="index">
                             <img  :src="item.img">
                             <p>{{item.name}}</p>
+
+                            <router-link :to="{ 
+                                name: 'item', 
+                                params: { name: item.id, obj: item.type},
+                                props: {obj: item.type}}"
+                                >Go to Example Item
+                            </router-link>
+
+
                             <button @click="showDets(Event,index)">Zobacz</button>
 
                             <div class="scrollableContainer">

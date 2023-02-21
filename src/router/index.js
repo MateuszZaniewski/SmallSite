@@ -4,6 +4,7 @@ import AboutView from '../views/AboutView.vue'
 import CollectionView from '../views/CollectionView.vue'
 import OnlineStoreView from '../views/OnlineStoreView.vue'
 import ContactView from '../views/ContactView.vue'
+import ItemDetails from '../components/subComponents/ItemDetails.vue'
 
 const routes = [
   {
@@ -17,11 +18,6 @@ const routes = [
     component: AboutView
   },
   {
-    path: '/collection',
-    name: 'collection',
-    component: CollectionView
-  },
-  {
     path: '/onlinestore',
     name: 'onlinestore',
     component: OnlineStoreView
@@ -32,9 +28,16 @@ const routes = [
     component: ContactView
   },
   {
-    path: '/collection/product',
-    name: '/collection/product',
-    component : CollectionView
+    path: '/collection',
+    name: 'collection',
+    component: CollectionView
+  },
+  {
+    path: '/collection/:name',
+    name: 'item',
+    component: ItemDetails,
+    props: true
+
   },
   {
     path: '/:catchAll(.*)',
