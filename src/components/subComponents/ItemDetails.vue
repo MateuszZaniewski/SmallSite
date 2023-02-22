@@ -1,13 +1,14 @@
 <template>
   <div>
-    <h1>{{ name }}</h1>
-    <h2> {{obj}} </h2>
+    <p>{{name.name}}</p>
+    <span>{{itemName}}</span>
   </div>
 </template>
 
 <script>
 
 import collectionDB from '../../store/collectionDB.js'
+import { ref } from 'vue'
 
 export default {
   name: 'ItemDetails',
@@ -16,23 +17,22 @@ export default {
   },
   props: {
     name: {
-      type: String,
+      type: Object,
       required: true
     },
-    obj : {
-      type: String,
-      required: true
+  },
+  setup(props){
+    const itemName = ref(props.name.name)
+
+    return {
+      itemName
     }
   },
-  created() {
-    console.log('Obj:', this.obj)
-  },
   data() {
-    let ItemName = this.name
-    
+
     return {
        db : collectionDB,
-       ItemName
+
     }
 }
 }

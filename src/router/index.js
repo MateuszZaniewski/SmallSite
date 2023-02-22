@@ -4,7 +4,7 @@ import AboutView from '../views/AboutView.vue'
 import CollectionView from '../views/CollectionView.vue'
 import OnlineStoreView from '../views/OnlineStoreView.vue'
 import ContactView from '../views/ContactView.vue'
-import ItemDetails from '../components/subComponents/ItemDetails.vue'
+import DetailsPageView from '../views/DetailsPageView.vue'
 
 const routes = [
   {
@@ -35,7 +35,7 @@ const routes = [
   {
     path: '/collection/:name',
     name: 'item',
-    component: ItemDetails,
+    component: DetailsPageView,
     props: true
 
   },

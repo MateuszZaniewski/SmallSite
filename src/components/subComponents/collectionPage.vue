@@ -91,8 +91,8 @@ export default {
 
                             <router-link :to="{ 
                                 name: 'item', 
-                                params: { name: item.id, obj: item.type},
-                                props: {obj: item.type}}"
+                                params: {name: index },
+                                }"
                                 >Go to Example Item
                             </router-link>
 
