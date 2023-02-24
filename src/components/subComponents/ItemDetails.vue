@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ul v-for="details in db.collection" :key="details">
+    <div v-for="details in filteredItems" :key="details">
       <div v-if="details.id == itemName">
         <div class="product">
           <div class="product__imageframe">
@@ -19,21 +19,30 @@
             <span class="summary--type"></span>
           </div>
 
+          <div class="product__buttons">
+            <button class="buttons--button"></button>
+            <button class="buttons--button"></button>
+            <button class="buttons--button"></button>
+          </div>
+
+          <div class="product__details">
+            <p class="details--text"></p>
+            <button class="details--more"></button>
+          </div>
+
+          <div class="product__redirect">
+            <button class="redirect--button"></button>
+          </div>
+
         </div>
       </div>
-    </ul>
+    </div>
   </div>
-
-  <!-- <img :src="details.img">
-          {{ details.details.opis }}
-          {{ details.details.colors }}
-          {{ details.details.sklad }}
-          {{ details.details.pranie }} -->
 </template>
 
 <script>
 
-import collectionDB from '../../store/collectionDB.js'
+import {database} from '../../store/collectionDB.js'
 import { ref } from 'vue'
 
 export default {
@@ -49,20 +58,36 @@ export default {
   },
   setup(props){
     const itemName = ref(props.name.name)
+    
     return {
       itemName
     }
   },
-  data() {
-
+  data(props) {
     return {
-       db : collectionDB,
+       db : database,
+       filterName: ref(props.name.name)
 
     }
+  },
+  computed: {
+    filteredItems() {
+    const filtered = {}
+    for (const key in this.db.collection) {
+      if (Object.prototype.hasOwnProperty.call(this.db.collection, key) && this.db.collection[key].id === this.filterName) {
+        filtered[key] = this.db.collection[key]
+      }
+    }
+    return filtered
+  }
 }
 }
 </script>
 
-<style>
+<style scoped>
+
+.product {
+  width: 100%;
+}
 
 </style>

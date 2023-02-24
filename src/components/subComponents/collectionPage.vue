@@ -1,6 +1,6 @@
 <script>
 
-import collectionDB from '../../store/collectionDB.js'
+import {database} from '../../store/collectionDB.js'
 
 export default {
   name: 'CollectionPage',
@@ -15,7 +15,7 @@ export default {
     const scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop
 
     return {
-       db : collectionDB,
+       db : database,
        showSection1: true,
        showSection2: true,
        showSection3: true,

@@ -1,4 +1,4 @@
-export default {
+export const database = {
     collection : {
         item1 : {
             id: 'item1',
@@ -163,3 +163,4 @@ export default {
     }
         
     }
+
