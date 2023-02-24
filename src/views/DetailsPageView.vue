@@ -33,8 +33,6 @@
     },
     setup(){
       const width = window.innerWidth
-      console.log(name)
-    
       return {
         width,
       }

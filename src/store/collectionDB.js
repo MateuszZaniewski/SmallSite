@@ -2,15 +2,24 @@ export const database = {
     collection : {
         item1 : {
             id: 'item1',
-            name: 'Olivia 1005 Biustonosz usztywniany, beżowy',
-            type: 'Komplet',
-            img: require('../store/database/olivia_1005.jpg'),
+            name: 'Vivisence 1035 Biustonosz push-up, beżowy',
+            shortName : 'Vivisence 1035',
+            type: 'Biustonosz usztywniany',
+            img: require('../store/database/Vivisence_1035.jpg'),
             details : {
-                opis : 'The most stunning womens bra with padded cups and metal wires. Upper cup, back and front gore made of shiny microfibre. Cups decorated with the most beautiful, subtle lacy embroideries.Regulated, not separable straps come in different widths (depending on a size). Side seam boning.Three sets of two hook and eye back closure. Subtle bows placed between the cups and on the straps add extra charm. Seductive v-neck effect combined with great shaping and support – all you can expect from a bra! Matching Olivia 1005 briefs available in beige colour only.',
-                colors : 'Available colours: beige',
-                sklad : 'Composition: 68% polyamide, 16% cotton, 12% elastane, 4% other fabrics',
-                pranie : 'Washing: Handwash only, Do not Dry Clean, Do not bleach, Do not iron, Do not Tumble dry.'
-            }
+                opis : 'Specjalistyczny biustonosz typu push-up do zadań specjalnych. Idealna propozycja do kreacji z odkrytymi plecami. Biustonosz w całości wykonany jest z gładkiej mikrofibry. Model bez fiszbin bocznych. Druty podtrzymują i kształtują piersi. Niski mostek. Wyjmowane wkładki powiększające. Ramiączka regulowane, odpinane. Ramiączka silikonowe. Trzy możliwości krzyżowania ramiączek. Plastikowe haczyki do ramiączek. W tyle przezroczysty silikonowy pasek obniżający zapięcie. Plastikowe zapięcie z przodu. Między miseczkami subtelna ozdoba. Bielizna pakowana jest w eleganckie pudełko, doskonale nadaje się na prezent',
+                sklad : '88% Polamid, 8% Bawełna, 4% Elastan',
+                redirect : 'https://www.kontri.pl/pl/products/vivisence-1035-biustonosz-push-up-bezowy-5176.html?query_id=3#product_askforproduct',
+                info : {
+                    pranie : 'Tylko pranie ręczne, nie czyścić chemicznie, nie wybielać, nie prasować, nie suszyć w suszarce.',
+                    ramiaczkaRe : 'Ramiączka regulowane : Tak',
+                    ramiaczkaOd : 'Ramiączka odpinane: Tak',
+                    druty : 'Druty : Tak',
+                    haczyki : 'Haczyki do ramiączek: plastikowe',
+                    zapiecie : 'Miejsce zapięcia: przód',
+                    kieszonki : 'Kieszonki na wkładki: Tak'
+                },
+            },
         },
         item2 : {
             id: 'item2',
@@ -21,7 +30,12 @@ export const database = {
                 opis : 'The most stunning womens bra with padded cups and metal wires. Upper cup, back and front gore made of shiny microfibre. Cups decorated with the most beautiful, subtle lacy embroideries.Regulated, not separable straps come in different widths (depending on a size). Side seam boning.Three sets of two hook and eye back closure. Subtle bows placed between the cups and on the straps add extra charm. Seductive v-neck effect combined with great shaping and support – all you can expect from a bra! Matching Olivia 1005 briefs available in beige colour only.',
                 colors : 'Available colours: beige',
                 sklad : 'Composition: 68% polyamide, 16% cotton, 12% elastane, 4% other fabrics',
-                pranie : 'Washing: Handwash only, Do not Dry Clean, Do not bleach, Do not iron, Do not Tumble dry.'
+                info : {
+                    pranie : 'Tylko pranie ręczne, nie czyścić chemicznie, nie wybielać, nie prasować, nie suszyć w suszarce.',
+                    ramiaczkaRe : 'Ramiączka regulowane : Tak',
+                    ramiaczkaOd : 'Ramiączka odpinane: Tak',
+                    druty : 'Druty : Tak',
+                }
             }
         },
         item3 : {

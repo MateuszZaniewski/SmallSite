@@ -89,35 +89,14 @@ export default {
                             <img  :src="item.img">
                             <p>{{item.name}}</p>
 
-                            <router-link :to="{ 
+                            <router-link class="redirect" :to="{ 
                                 name: 'item', 
                                 params: {
                                     name: index
                                 },
                                 }"
-                                >Go to Example Item
+                                >Zobacz
                             </router-link>
-
-
-                            <button @click="showDets(Event,index)">Zobacz</button>
-
-                            <div class="scrollableContainer">
-                                <div :class="index" class="hide productDetails">
-                                    <button @click="showDets(Event,index)">Zamknij</button>
-                                    <div class="details__Image">
-                                        <img :src="item.img">
-                                    </div>
-                                    
-                                    <div class="details__info">
-                                        <p>Nazwa produktu : {{item.name}}</p>
-                                        <p>Opis produktu : {{item.details.opis}}</p>
-                                        <p>Dostępne kolory : {{item.details.colors}}</p>
-                                        <p>Skład produktu : {{item.details.sklad}}</p>
-                                        <p>Informacje o praniu : {{item.details.pranie}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
                         </div>
 
                         
@@ -153,38 +132,12 @@ export default {
 
 <style scoped>
 
-.hide {
-    display: none;
-}
-
-.scrollableContainer{
-    max-height: 100%;
-    overflow-x: scroll;
-}
-
-.productDetails{
-    position: absolute;
-    background: rgb(161, 235, 161);
-    left: 0;
-    top: 0;
-    width: 100%;
-    z-index: 999;
-    overflow-x: scroll;
-}
-
-.details__Image {
-    max-height: 400px;
-    width: 90%;
-    margin: 0 auto;
-    margin-bottom: 1vh;
-}
-.details__Image img{
-    max-height: 400px;
-
-}
-
-.details__info p{
-    padding-bottom: 1vh;
+.redirect{
+    background: rgb(207, 206, 206);
+    color: black;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
 }
 
 h1{
@@ -216,6 +169,7 @@ h1{
 
 #collectionWrapper ul li div p {
     margin: 0;
+    padding-bottom: 0.5rem;
     font-size: 0.7rem;
     word-break: break-word;
     text-decoration: none;
