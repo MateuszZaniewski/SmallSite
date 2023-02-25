@@ -105,27 +105,45 @@ export default {
 
             <h2 v-if="showSection2">Koszule nocne</h2>
             <ul v-if="showSection2">
-                <li v-for="shirt in db.nightwear" v-bind:key="shirt">
+                <li v-for="(item, index) in db.nightwear" v-bind:key="item">
                     
-                        <div>
-                            <img :src="shirt.img">
-                            <p>{{shirt.name}}</p>
-                            <button @click="displayDetails">Więcej</button>
-                        </div>
+                    <div :id="index">
+                        <img  :src="item.img">
+                        <p>{{item.name}}</p>
+
+                        <router-link class="redirect" :to="{ 
+                            name: 'item', 
+                            params: {
+                                name: index
+                            },
+                            }"
+                            >Zobacz
+                        </router-link>
+                    </div>
+
                     
-                </li>
+            </li>
             </ul>
             <h2 v-if="showSection3">Stroje kąpielowe</h2>
             <ul v-if="showSection3">
-                <li v-for="swimmwear in db.swimmwear" v-bind:key="swimmwear">
+                <li v-for="(item, index) in db.swimmwear" v-bind:key="item">
                     
-                        <div>
-                            <img :src="swimmwear.img">
-                            <p>{{swimmwear.name}}</p>
-                            <button @click="displayDetails">Więcej</button>
-                        </div>
+                    <div :id="index">
+                        <img  :src="item.img">
+                        <p>{{item.name}}</p>
+
+                        <router-link class="redirect" :to="{ 
+                            name: 'item', 
+                            params: {
+                                name: index
+                            },
+                            }"
+                            >Zobacz
+                        </router-link>
+                    </div>
+
                     
-                </li>
+            </li>
             </ul>
         </div>
 </template>

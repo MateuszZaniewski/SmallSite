@@ -4,7 +4,7 @@ export const database = {
             id: 'item1',
             name: 'Vivisence 1035 Biustonosz push-up, beżowy',
             shortName : 'Vivisence 1035',
-            type: 'Biustonosz usztywniany',
+            type: 'Biustonosz push-up',
             img: require('../store/database/Vivisence_1035.jpg'),
             img2: require('../store/database/Vivisence_1035-2.jpg'),
             img3: require('../store/database/Vivisence_1035-3.jpg'),
@@ -25,155 +25,592 @@ export const database = {
         },
         item2 : {
             id: 'item2',
-            name: 'Elise 1003 Biustonosz półusztywniany, beżowy',
-            type: 'Komplet',
-            img: require('../store/database/Elise_1003.jpg'),
+            name: 'Vivisence 1046 Biustonosz usztywniany, beżowy',
+            shortName : 'Vivisence 1046',
+            type: 'Biustonosz usztywniany',
+            img: require('../store/database/Vivisence_1046.jpg'),
+            img2: require('../store/database/Vivisence_1046-2.jpg'),
+            img3: require('../store/database/Vivisence_1046-3.jpg'),
             details : {
-                opis : 'The most stunning womens bra with padded cups and metal wires. Upper cup, back and front gore made of shiny microfibre. Cups decorated with the most beautiful, subtle lacy embroideries.Regulated, not separable straps come in different widths (depending on a size). Side seam boning.Three sets of two hook and eye back closure. Subtle bows placed between the cups and on the straps add extra charm. Seductive v-neck effect combined with great shaping and support – all you can expect from a bra! Matching Olivia 1005 briefs available in beige colour only.',
-                colors : 'Available colours: beige',
-                sklad : 'Composition: 68% polyamide, 16% cotton, 12% elastane, 4% other fabrics',
+                opis : 'Wyjątkowy usztywniany biustonosz typu "SPACER". Miseczki termincznie kształtowane, wykonane z wewnętrznej i zewnętrznej warstwy mikrofibry, między którymi istnieje przestrzeń, dająca lepszy przepływ potwietrza, co pozwala oddychać skórze. Ergonomiczny kształt miseczek idealnie dopasowuje biust. Miseczki gładkie, bezszwowe - nie odznaczają się pod odzieżą wierzchnią. Miseczki od wewnątrz (od strony pachy) wzmocnione warstwą tiulu stabilnego, który zabezpiecza przed zniekształceniem biustonosza w trakcie użytkowania oraz przenosi ciążar biustu do przodu, pięknie eksponując dekolt. Pomiędzy miseczkami i na górze miski delikatne kokardki. Mostek wykonany z tiulu, który stabilizuje miseczki. Boczki z mikrofibry dają wysoki komfort użytkowania, również przy dużych biustach. Ramiączka regulowane, nieodpinane. Metalowe haczyki do ramiączek. Trzyrzędowe zapięcie na haftki z trzystopniową regulacją. Konstrukcja SPACERA sprawia, że biustonosz idealnie nadaje się zarówno do codziennego użytkowania, jak i podczas uprawiania różnego typu aktywności sportowej. Bielizna pakowana jest w eleganckie pudełko, idealna propozycja na prezent',
+                sklad : '90% poliamid, 10% elastan',
+                redirect : 'https://www.kontri.pl/pl/products/vivisence-1046-biustonosz-usztywniany-czarny-8718.html',
+                info : {
+                    pranie : 'Tylko pranie ręczne, nie czyścić chemicznie, nie wybielać, nie prasować, nie suszyć w suszarce.',
+                    ramiaczkaRe : 'Ramiączka regulowane : Tak',
+                    ramiaczkaOd : 'Ramiączka odpinane: Nie',
+                    druty : 'Druty : Tak',
+                    haczyki : 'Haczyki do ramiączek: metalowe',
+                    zapiecie : 'Miejsce zapięcia: tył',
+                    kieszonki : 'Kieszonki na wkładki: Tak'
+                },
+            },
+        },
+        item3 : {
+            id: 'item3',
+            name: 'Vivisence Eve 1012 Biustonosz specjalistyczny, beżowy',
+            shortName : 'Vivisence Eve 1012',
+            type: 'Biustonosz specjalistyczny',
+            img: require('../store/database/Vivisence_1012.jpg'),
+            img2: require('../store/database/Vivisence_1012-2.jpg'),
+            img3: require('../store/database/Vivisence_1012-3.jpg'),
+            details : {
+                opis : 'Specjalistyczny biustonosz typu push-up do kreacji z odkrytymi plecami. Biustonosz w całości wykonany jest z gładkiej mikrofibry. Model bez fiszbin bocznych. Druty podtrzymują i kształtują piersi. Niski mostek. Wyjmowane wkładki powiększające. Ramiączka regulowane, odpinane. Ramiączka silikonowe. Metalowe haczyki do ramiączek. Z przodu plastikowe zapięcie. Z tyłu przezroczysta silikonowa taśma. Bielizna pakowana jest w eleganckie pudełko, doskonale nadaje się na prezent',
+                sklad : '88% poliamid, 8% bawełna, 4% elastan',
+                redirect : 'https://www.kontri.pl/pl/products/vivisence-eve-1012-biustonosz-specjalistyczny-bezowy-2383.html',
                 info : {
                     pranie : 'Tylko pranie ręczne, nie czyścić chemicznie, nie wybielać, nie prasować, nie suszyć w suszarce.',
                     ramiaczkaRe : 'Ramiączka regulowane : Tak',
                     ramiaczkaOd : 'Ramiączka odpinane: Tak',
                     druty : 'Druty : Tak',
-                }
-            }
-        },
-        item3 : {
-            id: 'item3',
-            name: 'Melanie 1007 Biustonosz usztywniany, beżowy',
-            type: 'Komplet',
-            img: require('../store/database/Melanie_1007.jpg'),
-            details : {
-                1: 'xD',
-                2: 'dX',
-                3: 'YY'
-            }
+                    haczyki : 'Haczyki do ramiączek: metalowe',
+                    zapiecie : 'Miejsce zapięcia: przód',
+                    kieszonki : 'Kieszonki na wkładki: Tak'
+                },
+            },
         },
         item4 : {
             id: 'item4',
-            name: 'Jennifer 1013 Biustonosz półusztywniany, biały',
-            type: 'Komplet',
-            img: require('../store/database/Jennifer_1013.jpg'),
+            name: 'Vivisence 1045 Biustonosz półusztywniany, czarny',
+            shortName : 'Vivisence 1045',
+            type: 'Biustonosz półusztywniany',
+            img: require('../store/database/Vivisence_1045.jpg'),
+            img2: require('../store/database/Vivisence_1045-2.jpg'),
+            img3: require('../store/database/Vivisence_1045-3.jpg'),
             details : {
-                1: 'xD',
-                2: 'dX',
-                3: 'YY'
-            }
+                opis : 'Subtelny i niezwykle kobiecy biustonosz półusztywniany. Górna część miseczek wykonane są z połyskującej, kwiecistej koronki, podszytej siateczką. Dół miseczek wykonany jest z pianki gorseciarskiej pokrytej połyskującej koronką. Mostek i boczki wykonane z połyskującej koronki, podszytej siateczką. Między miseczkami urocza kokardka. Druty podtrzymują i kształtują piersi. Pionowe fiszbiny boczne. Ramiączka regulowane, nieodpinane. Metalowe haczyki do ramiączek. Plecy wykonane ze sprężystej, wzmocnionej siateczki. Dwurzędowe/trzystopniowe zapięcie na haftki z trzystopniową regulacją. Bielizna pakowana jest w eleganckie pudełko, doskonale nadaje się na prezent',
+                sklad : '47% nylon, 21% poliamid, 14% bawełna, 12% elastan, 6% poliuretan',
+                redirect : 'https://www.kontri.pl/pl/products/vivisence-1045-biustonosz-polusztywniany-czarny-7790.html?query_id=3',
+                info : {
+                    pranie : 'Tylko pranie ręczne, nie czyścić chemicznie, nie wybielać, nie prasować, nie suszyć w suszarce.',
+                    ramiaczkaRe : 'Ramiączka regulowane : Tak',
+                    ramiaczkaOd : 'Ramiączka odpinane: Nie',
+                    druty : 'Druty : Tak',
+                    haczyki : 'Haczyki do ramiączek: metalowe',
+                    zapiecie : 'Miejsce zapięcia: tył',
+                    kieszonki : 'Kieszonki na wkładki: Brak'
+                },
+            },
         },
         item5 : {
             id: 'item5',
-            name: 'Juliet 1004 Biustonosz usztywniany, beżowy',
-            type: 'Komplet',
-            img: require('../store/database/Juliet_1004.jpg'),
+            name: 'Vivisence 1035 Biustonosz push-up, beżowy',
+            shortName : 'Vivisence 1035',
+            type: 'Biustonosz push-up',
+            img: require('../store/database/Vivisence_1035.jpg'),
+            img2: require('../store/database/Vivisence_1035-2.jpg'),
+            img3: require('../store/database/Vivisence_1035-3.jpg'),
             details : {
-                1: 'xD',
-                2: 'dX',
-                3: 'YY'
-            }
+                opis : 'Specjalistyczny biustonosz typu push-up do zadań specjalnych. Idealna propozycja do kreacji z odkrytymi plecami. Biustonosz w całości wykonany jest z gładkiej mikrofibry. Model bez fiszbin bocznych. Druty podtrzymują i kształtują piersi. Niski mostek. Wyjmowane wkładki powiększające. Ramiączka regulowane, odpinane. Ramiączka silikonowe. Trzy możliwości krzyżowania ramiączek. Plastikowe haczyki do ramiączek. W tyle przezroczysty silikonowy pasek obniżający zapięcie. Plastikowe zapięcie z przodu. Między miseczkami subtelna ozdoba. Bielizna pakowana jest w eleganckie pudełko, doskonale nadaje się na prezent',
+                sklad : '88% Polamid, 8% Bawełna, 4% Elastan',
+                redirect : 'https://www.kontri.pl/pl/products/vivisence-1035-biustonosz-push-up-bezowy-5176.html?query_id=3#product_askforproduct',
+                info : {
+                    pranie : 'Tylko pranie ręczne, nie czyścić chemicznie, nie wybielać, nie prasować, nie suszyć w suszarce.',
+                    ramiaczkaRe : 'Ramiączka regulowane : Tak',
+                    ramiaczkaOd : 'Ramiączka odpinane: Tak',
+                    druty : 'Druty : Tak',
+                    haczyki : 'Haczyki do ramiączek: plastikowe',
+                    zapiecie : 'Miejsce zapięcia: przód',
+                    kieszonki : 'Kieszonki na wkładki: Tak'
+                },
+            },
         },
         item6 : {
             id: 'item6',
-            name: 'Jasmine 1009 Biustonosz usztywniany, biały',
-            type: 'Komplet',
-            img: require('../store/database/Jasmine_1009.jpg'),
+            name: 'Vivisence 1046 Biustonosz usztywniany, beżowy',
+            shortName : 'Vivisence 1046',
+            type: 'Biustonosz usztywniany',
+            img: require('../store/database/Vivisence_1046.jpg'),
+            img2: require('../store/database/Vivisence_1046-2.jpg'),
+            img3: require('../store/database/Vivisence_1046-3.jpg'),
             details : {
-                1: 'xD',
-                2: 'dX',
-                3: 'YY'
-            }
+                opis : 'Wyjątkowy usztywniany biustonosz typu "SPACER". Miseczki termincznie kształtowane, wykonane z wewnętrznej i zewnętrznej warstwy mikrofibry, między którymi istnieje przestrzeń, dająca lepszy przepływ potwietrza, co pozwala oddychać skórze. Ergonomiczny kształt miseczek idealnie dopasowuje biust. Miseczki gładkie, bezszwowe - nie odznaczają się pod odzieżą wierzchnią. Miseczki od wewnątrz (od strony pachy) wzmocnione warstwą tiulu stabilnego, który zabezpiecza przed zniekształceniem biustonosza w trakcie użytkowania oraz przenosi ciążar biustu do przodu, pięknie eksponując dekolt. Pomiędzy miseczkami i na górze miski delikatne kokardki. Mostek wykonany z tiulu, który stabilizuje miseczki. Boczki z mikrofibry dają wysoki komfort użytkowania, również przy dużych biustach. Ramiączka regulowane, nieodpinane. Metalowe haczyki do ramiączek. Trzyrzędowe zapięcie na haftki z trzystopniową regulacją. Konstrukcja SPACERA sprawia, że biustonosz idealnie nadaje się zarówno do codziennego użytkowania, jak i podczas uprawiania różnego typu aktywności sportowej. Bielizna pakowana jest w eleganckie pudełko, idealna propozycja na prezent',
+                sklad : '90% poliamid, 10% elastan',
+                redirect : 'https://www.kontri.pl/pl/products/vivisence-1046-biustonosz-usztywniany-czarny-8718.html',
+                info : {
+                    pranie : 'Tylko pranie ręczne, nie czyścić chemicznie, nie wybielać, nie prasować, nie suszyć w suszarce.',
+                    ramiaczkaRe : 'Ramiączka regulowane : Tak',
+                    ramiaczkaOd : 'Ramiączka odpinane: Nie',
+                    druty : 'Druty : Tak',
+                    haczyki : 'Haczyki do ramiączek: metalowe',
+                    zapiecie : 'Miejsce zapięcia: tył',
+                    kieszonki : 'Kieszonki na wkładki: Tak'
+                },
+            },
         },
         item7 : {
             id: 'item7',
-            name: 'Lily 1014 Biustonosz usztywniany, wrzosowy',
-            type: 'Komplet',
-            img: require('../store/database/Lily_1014.jpg'),
+            name: 'Vivisence Eve 1012 Biustonosz specjalistyczny, beżowy',
+            shortName : 'Vivisence Eve 1012',
+            type: 'Biustonosz specjalistyczny',
+            img: require('../store/database/Vivisence_1012.jpg'),
+            img2: require('../store/database/Vivisence_1012-2.jpg'),
+            img3: require('../store/database/Vivisence_1012-3.jpg'),
             details : {
-                1: 'xD',
-                2: 'dX',
-                3: 'YY'
-            }
+                opis : 'Specjalistyczny biustonosz typu push-up do kreacji z odkrytymi plecami. Biustonosz w całości wykonany jest z gładkiej mikrofibry. Model bez fiszbin bocznych. Druty podtrzymują i kształtują piersi. Niski mostek. Wyjmowane wkładki powiększające. Ramiączka regulowane, odpinane. Ramiączka silikonowe. Metalowe haczyki do ramiączek. Z przodu plastikowe zapięcie. Z tyłu przezroczysta silikonowa taśma. Bielizna pakowana jest w eleganckie pudełko, doskonale nadaje się na prezent',
+                sklad : '88% poliamid, 8% bawełna, 4% elastan',
+                redirect : 'https://www.kontri.pl/pl/products/vivisence-eve-1012-biustonosz-specjalistyczny-bezowy-2383.html',
+                info : {
+                    pranie : 'Tylko pranie ręczne, nie czyścić chemicznie, nie wybielać, nie prasować, nie suszyć w suszarce.',
+                    ramiaczkaRe : 'Ramiączka regulowane : Tak',
+                    ramiaczkaOd : 'Ramiączka odpinane: Tak',
+                    druty : 'Druty : Tak',
+                    haczyki : 'Haczyki do ramiączek: metalowe',
+                    zapiecie : 'Miejsce zapięcia: przód',
+                    kieszonki : 'Kieszonki na wkładki: Tak'
+                },
+            },
         },
         item8 : {
             id: 'item8',
-            name: 'Vivisence 1025 Biustonosz usztywniany, granatowy',
-            type: 'Komplet',
-            img: require('../store/database/Vivisence_1025.jpg'),
+            name: 'Vivisence 1045 Biustonosz półusztywniany, czarny',
+            shortName : 'Vivisence 1045',
+            type: 'Biustonosz półusztywniany',
+            img: require('../store/database/Vivisence_1045.jpg'),
+            img2: require('../store/database/Vivisence_1045-2.jpg'),
+            img3: require('../store/database/Vivisence_1045-3.jpg'),
             details : {
-                1: 'xD',
-                2: 'dX',
-                3: 'YY'
-            }
-        }
+                opis : 'Subtelny i niezwykle kobiecy biustonosz półusztywniany. Górna część miseczek wykonane są z połyskującej, kwiecistej koronki, podszytej siateczką. Dół miseczek wykonany jest z pianki gorseciarskiej pokrytej połyskującej koronką. Mostek i boczki wykonane z połyskującej koronki, podszytej siateczką. Między miseczkami urocza kokardka. Druty podtrzymują i kształtują piersi. Pionowe fiszbiny boczne. Ramiączka regulowane, nieodpinane. Metalowe haczyki do ramiączek. Plecy wykonane ze sprężystej, wzmocnionej siateczki. Dwurzędowe/trzystopniowe zapięcie na haftki z trzystopniową regulacją. Bielizna pakowana jest w eleganckie pudełko, doskonale nadaje się na prezent',
+                sklad : '47% nylon, 21% poliamid, 14% bawełna, 12% elastan, 6% poliuretan',
+                redirect : 'https://www.kontri.pl/pl/products/vivisence-1045-biustonosz-polusztywniany-czarny-7790.html?query_id=3',
+                info : {
+                    pranie : 'Tylko pranie ręczne, nie czyścić chemicznie, nie wybielać, nie prasować, nie suszyć w suszarce.',
+                    ramiaczkaRe : 'Ramiączka regulowane : Tak',
+                    ramiaczkaOd : 'Ramiączka odpinane: Nie',
+                    druty : 'Druty : Tak',
+                    haczyki : 'Haczyki do ramiączek: metalowe',
+                    zapiecie : 'Miejsce zapięcia: tył',
+                    kieszonki : 'Kieszonki na wkładki: Brak'
+                },
+            },
+        },
 
     },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     nightwear : {
         item1 : {
-            name: 'Natalie 2001 Koszula nocna, różowa',
-            img: require('../store/database/Natalie_2001.jpg')
+            id: 'item1',
+            name: 'Babella Monica Nocna koszulka, czerwony',
+            shortName : 'Babella Monica',
+            type: 'Koszula nocna',
+            img: require('../store/database/Babella_Monica.jpg'),
+            img2: require('../store/database/Babella_Monica-2.jpg'),
+            img3: require('../store/database/Babella_Monica-3.jpg'),
+            details : {
+                opis : 'Elegancka i niezwykle kobieca koszulka nocna. Klasyczny krój. Cienkie, regulowane ramiączka. Subtelne marszczenia na biuście. Dekolt i boki zdobią koronkowe wstawki. Przyjemna w dotyku wiskoza',
+                sklad : '88% Polamid, 8% Bawełna, 4% Elastan',
+                redirect : 'https://www.kontri.pl/pl/products/vivisence-1035-biustonosz-push-up-bezowy-5176.html?query_id=3#product_askforproduct',
+                info : {
+                    pranie : 'Tylko pranie ręczne, nie czyścić chemicznie, nie wybielać, nie prasować, nie suszyć w suszarce.',
+                    ramiaczkaRe : 'Ramiączka regulowane : Tak',
+                    ramiaczkaOd : 'Ramiączka odpinane: Tak',
+                    druty : 'Druty : Tak',
+                    haczyki : 'Haczyki do ramiączek: plastikowe',
+                    zapiecie : 'Miejsce zapięcia: przód',
+                    kieszonki : 'Kieszonki na wkładki: Tak'
+                },
+            },
         },
         item2 : {
-            name: 'Naomi 2002 Koszula nocna, różowa',
-            img: require('../store/database/Naomi_2002.jpg')
+            id: 'item2',
+            name: 'Vivisence 1046 Biustonosz usztywniany, beżowy',
+            shortName : 'Vivisence 1046',
+            type: 'Biustonosz usztywniany',
+            img: require('../store/database/Vivisence_1046.jpg'),
+            img2: require('../store/database/Vivisence_1046-2.jpg'),
+            img3: require('../store/database/Vivisence_1046-3.jpg'),
+            details : {
+                opis : 'Wyjątkowy usztywniany biustonosz typu "SPACER". Miseczki termincznie kształtowane, wykonane z wewnętrznej i zewnętrznej warstwy mikrofibry, między którymi istnieje przestrzeń, dająca lepszy przepływ potwietrza, co pozwala oddychać skórze. Ergonomiczny kształt miseczek idealnie dopasowuje biust. Miseczki gładkie, bezszwowe - nie odznaczają się pod odzieżą wierzchnią. Miseczki od wewnątrz (od strony pachy) wzmocnione warstwą tiulu stabilnego, który zabezpiecza przed zniekształceniem biustonosza w trakcie użytkowania oraz przenosi ciążar biustu do przodu, pięknie eksponując dekolt. Pomiędzy miseczkami i na górze miski delikatne kokardki. Mostek wykonany z tiulu, który stabilizuje miseczki. Boczki z mikrofibry dają wysoki komfort użytkowania, również przy dużych biustach. Ramiączka regulowane, nieodpinane. Metalowe haczyki do ramiączek. Trzyrzędowe zapięcie na haftki z trzystopniową regulacją. Konstrukcja SPACERA sprawia, że biustonosz idealnie nadaje się zarówno do codziennego użytkowania, jak i podczas uprawiania różnego typu aktywności sportowej. Bielizna pakowana jest w eleganckie pudełko, idealna propozycja na prezent',
+                sklad : '90% poliamid, 10% elastan',
+                redirect : 'https://www.kontri.pl/pl/products/vivisence-1046-biustonosz-usztywniany-czarny-8718.html',
+                info : {
+                    pranie : 'Tylko pranie ręczne, nie czyścić chemicznie, nie wybielać, nie prasować, nie suszyć w suszarce.',
+                    ramiaczkaRe : 'Ramiączka regulowane : Tak',
+                    ramiaczkaOd : 'Ramiączka odpinane: Nie',
+                    druty : 'Druty : Tak',
+                    haczyki : 'Haczyki do ramiączek: metalowe',
+                    zapiecie : 'Miejsce zapięcia: tył',
+                    kieszonki : 'Kieszonki na wkładki: Tak'
+                },
+            },
         },
         item3 : {
-            name: 'Amy 2003 Koszula nocna, ecru',
-            img: require('../store/database/Amy_2003.jpg')
+            id: 'item3',
+            name: 'Vivisence Eve 1012 Biustonosz specjalistyczny, beżowy',
+            shortName : 'Vivisence Eve 1012',
+            type: 'Biustonosz specjalistyczny',
+            img: require('../store/database/Vivisence_1012.jpg'),
+            img2: require('../store/database/Vivisence_1012-2.jpg'),
+            img3: require('../store/database/Vivisence_1012-3.jpg'),
+            details : {
+                opis : 'Specjalistyczny biustonosz typu push-up do kreacji z odkrytymi plecami. Biustonosz w całości wykonany jest z gładkiej mikrofibry. Model bez fiszbin bocznych. Druty podtrzymują i kształtują piersi. Niski mostek. Wyjmowane wkładki powiększające. Ramiączka regulowane, odpinane. Ramiączka silikonowe. Metalowe haczyki do ramiączek. Z przodu plastikowe zapięcie. Z tyłu przezroczysta silikonowa taśma. Bielizna pakowana jest w eleganckie pudełko, doskonale nadaje się na prezent',
+                sklad : '88% poliamid, 8% bawełna, 4% elastan',
+                redirect : 'https://www.kontri.pl/pl/products/vivisence-eve-1012-biustonosz-specjalistyczny-bezowy-2383.html',
+                info : {
+                    pranie : 'Tylko pranie ręczne, nie czyścić chemicznie, nie wybielać, nie prasować, nie suszyć w suszarce.',
+                    ramiaczkaRe : 'Ramiączka regulowane : Tak',
+                    ramiaczkaOd : 'Ramiączka odpinane: Tak',
+                    druty : 'Druty : Tak',
+                    haczyki : 'Haczyki do ramiączek: metalowe',
+                    zapiecie : 'Miejsce zapięcia: przód',
+                    kieszonki : 'Kieszonki na wkładki: Tak'
+                },
+            },
         },
         item4 : {
-            name: 'Amy 2003 Koszula nocna, granatowa',
-            img: require('../store/database/Amy_2003-1.jpg')
+            id: 'item4',
+            name: 'Vivisence 1045 Biustonosz półusztywniany, czarny',
+            shortName : 'Vivisence 1045',
+            type: 'Biustonosz półusztywniany',
+            img: require('../store/database/Vivisence_1045.jpg'),
+            img2: require('../store/database/Vivisence_1045-2.jpg'),
+            img3: require('../store/database/Vivisence_1045-3.jpg'),
+            details : {
+                opis : 'Subtelny i niezwykle kobiecy biustonosz półusztywniany. Górna część miseczek wykonane są z połyskującej, kwiecistej koronki, podszytej siateczką. Dół miseczek wykonany jest z pianki gorseciarskiej pokrytej połyskującej koronką. Mostek i boczki wykonane z połyskującej koronki, podszytej siateczką. Między miseczkami urocza kokardka. Druty podtrzymują i kształtują piersi. Pionowe fiszbiny boczne. Ramiączka regulowane, nieodpinane. Metalowe haczyki do ramiączek. Plecy wykonane ze sprężystej, wzmocnionej siateczki. Dwurzędowe/trzystopniowe zapięcie na haftki z trzystopniową regulacją. Bielizna pakowana jest w eleganckie pudełko, doskonale nadaje się na prezent',
+                sklad : '47% nylon, 21% poliamid, 14% bawełna, 12% elastan, 6% poliuretan',
+                redirect : 'https://www.kontri.pl/pl/products/vivisence-1045-biustonosz-polusztywniany-czarny-7790.html?query_id=3',
+                info : {
+                    pranie : 'Tylko pranie ręczne, nie czyścić chemicznie, nie wybielać, nie prasować, nie suszyć w suszarce.',
+                    ramiaczkaRe : 'Ramiączka regulowane : Tak',
+                    ramiaczkaOd : 'Ramiączka odpinane: Nie',
+                    druty : 'Druty : Tak',
+                    haczyki : 'Haczyki do ramiączek: metalowe',
+                    zapiecie : 'Miejsce zapięcia: tył',
+                    kieszonki : 'Kieszonki na wkładki: Brak'
+                },
+            },
         },
         item5 : {
-            name: 'Cherie 2004 Koszula nocna, czerwona',
-            img: require('../store/database/Cherie_2004.jpg')
+            id: 'item5',
+            name: 'Vivisence 1035 Biustonosz push-up, beżowy',
+            shortName : 'Vivisence 1035',
+            type: 'Biustonosz push-up',
+            img: require('../store/database/Vivisence_1035.jpg'),
+            img2: require('../store/database/Vivisence_1035-2.jpg'),
+            img3: require('../store/database/Vivisence_1035-3.jpg'),
+            details : {
+                opis : 'Specjalistyczny biustonosz typu push-up do zadań specjalnych. Idealna propozycja do kreacji z odkrytymi plecami. Biustonosz w całości wykonany jest z gładkiej mikrofibry. Model bez fiszbin bocznych. Druty podtrzymują i kształtują piersi. Niski mostek. Wyjmowane wkładki powiększające. Ramiączka regulowane, odpinane. Ramiączka silikonowe. Trzy możliwości krzyżowania ramiączek. Plastikowe haczyki do ramiączek. W tyle przezroczysty silikonowy pasek obniżający zapięcie. Plastikowe zapięcie z przodu. Między miseczkami subtelna ozdoba. Bielizna pakowana jest w eleganckie pudełko, doskonale nadaje się na prezent',
+                sklad : '88% Polamid, 8% Bawełna, 4% Elastan',
+                redirect : 'https://www.kontri.pl/pl/products/vivisence-1035-biustonosz-push-up-bezowy-5176.html?query_id=3#product_askforproduct',
+                info : {
+                    pranie : 'Tylko pranie ręczne, nie czyścić chemicznie, nie wybielać, nie prasować, nie suszyć w suszarce.',
+                    ramiaczkaRe : 'Ramiączka regulowane : Tak',
+                    ramiaczkaOd : 'Ramiączka odpinane: Tak',
+                    druty : 'Druty : Tak',
+                    haczyki : 'Haczyki do ramiączek: plastikowe',
+                    zapiecie : 'Miejsce zapięcia: przód',
+                    kieszonki : 'Kieszonki na wkładki: Tak'
+                },
+            },
         },
         item6 : {
-            name: 'Emily 2005 Koszula nocna, biała',
-            img: require('../store/database/Emily_2005.jpg')
+            id: 'item6',
+            name: 'Vivisence 1046 Biustonosz usztywniany, beżowy',
+            shortName : 'Vivisence 1046',
+            type: 'Biustonosz usztywniany',
+            img: require('../store/database/Vivisence_1046.jpg'),
+            img2: require('../store/database/Vivisence_1046-2.jpg'),
+            img3: require('../store/database/Vivisence_1046-3.jpg'),
+            details : {
+                opis : 'Wyjątkowy usztywniany biustonosz typu "SPACER". Miseczki termincznie kształtowane, wykonane z wewnętrznej i zewnętrznej warstwy mikrofibry, między którymi istnieje przestrzeń, dająca lepszy przepływ potwietrza, co pozwala oddychać skórze. Ergonomiczny kształt miseczek idealnie dopasowuje biust. Miseczki gładkie, bezszwowe - nie odznaczają się pod odzieżą wierzchnią. Miseczki od wewnątrz (od strony pachy) wzmocnione warstwą tiulu stabilnego, który zabezpiecza przed zniekształceniem biustonosza w trakcie użytkowania oraz przenosi ciążar biustu do przodu, pięknie eksponując dekolt. Pomiędzy miseczkami i na górze miski delikatne kokardki. Mostek wykonany z tiulu, który stabilizuje miseczki. Boczki z mikrofibry dają wysoki komfort użytkowania, również przy dużych biustach. Ramiączka regulowane, nieodpinane. Metalowe haczyki do ramiączek. Trzyrzędowe zapięcie na haftki z trzystopniową regulacją. Konstrukcja SPACERA sprawia, że biustonosz idealnie nadaje się zarówno do codziennego użytkowania, jak i podczas uprawiania różnego typu aktywności sportowej. Bielizna pakowana jest w eleganckie pudełko, idealna propozycja na prezent',
+                sklad : '90% poliamid, 10% elastan',
+                redirect : 'https://www.kontri.pl/pl/products/vivisence-1046-biustonosz-usztywniany-czarny-8718.html',
+                info : {
+                    pranie : 'Tylko pranie ręczne, nie czyścić chemicznie, nie wybielać, nie prasować, nie suszyć w suszarce.',
+                    ramiaczkaRe : 'Ramiączka regulowane : Tak',
+                    ramiaczkaOd : 'Ramiączka odpinane: Nie',
+                    druty : 'Druty : Tak',
+                    haczyki : 'Haczyki do ramiączek: metalowe',
+                    zapiecie : 'Miejsce zapięcia: tył',
+                    kieszonki : 'Kieszonki na wkładki: Tak'
+                },
+            },
         },
         item7 : {
-            name: 'Livia 2006 Koszula nocna, fioletowa',
-            img: require('../store/database/Livia_2006.jpg')
+            id: 'item7',
+            name: 'Vivisence Eve 1012 Biustonosz specjalistyczny, beżowy',
+            shortName : 'Vivisence Eve 1012',
+            type: 'Biustonosz specjalistyczny',
+            img: require('../store/database/Vivisence_1012.jpg'),
+            img2: require('../store/database/Vivisence_1012-2.jpg'),
+            img3: require('../store/database/Vivisence_1012-3.jpg'),
+            details : {
+                opis : 'Specjalistyczny biustonosz typu push-up do kreacji z odkrytymi plecami. Biustonosz w całości wykonany jest z gładkiej mikrofibry. Model bez fiszbin bocznych. Druty podtrzymują i kształtują piersi. Niski mostek. Wyjmowane wkładki powiększające. Ramiączka regulowane, odpinane. Ramiączka silikonowe. Metalowe haczyki do ramiączek. Z przodu plastikowe zapięcie. Z tyłu przezroczysta silikonowa taśma. Bielizna pakowana jest w eleganckie pudełko, doskonale nadaje się na prezent',
+                sklad : '88% poliamid, 8% bawełna, 4% elastan',
+                redirect : 'https://www.kontri.pl/pl/products/vivisence-eve-1012-biustonosz-specjalistyczny-bezowy-2383.html',
+                info : {
+                    pranie : 'Tylko pranie ręczne, nie czyścić chemicznie, nie wybielać, nie prasować, nie suszyć w suszarce.',
+                    ramiaczkaRe : 'Ramiączka regulowane : Tak',
+                    ramiaczkaOd : 'Ramiączka odpinane: Tak',
+                    druty : 'Druty : Tak',
+                    haczyki : 'Haczyki do ramiączek: metalowe',
+                    zapiecie : 'Miejsce zapięcia: przód',
+                    kieszonki : 'Kieszonki na wkładki: Tak'
+                },
+            },
         },
         item8 : {
-            name: 'Livia 2006 Koszula nocna, kremowa',
-            img: require('../store/database/Livia_2006-1.jpg')
-        }
+            id: 'item8',
+            name: 'Vivisence 1045 Biustonosz półusztywniany, czarny',
+            shortName : 'Vivisence 1045',
+            type: 'Biustonosz półusztywniany',
+            img: require('../store/database/Vivisence_1045.jpg'),
+            img2: require('../store/database/Vivisence_1045-2.jpg'),
+            img3: require('../store/database/Vivisence_1045-3.jpg'),
+            details : {
+                opis : 'Subtelny i niezwykle kobiecy biustonosz półusztywniany. Górna część miseczek wykonane są z połyskującej, kwiecistej koronki, podszytej siateczką. Dół miseczek wykonany jest z pianki gorseciarskiej pokrytej połyskującej koronką. Mostek i boczki wykonane z połyskującej koronki, podszytej siateczką. Między miseczkami urocza kokardka. Druty podtrzymują i kształtują piersi. Pionowe fiszbiny boczne. Ramiączka regulowane, nieodpinane. Metalowe haczyki do ramiączek. Plecy wykonane ze sprężystej, wzmocnionej siateczki. Dwurzędowe/trzystopniowe zapięcie na haftki z trzystopniową regulacją. Bielizna pakowana jest w eleganckie pudełko, doskonale nadaje się na prezent',
+                sklad : '47% nylon, 21% poliamid, 14% bawełna, 12% elastan, 6% poliuretan',
+                redirect : 'https://www.kontri.pl/pl/products/vivisence-1045-biustonosz-polusztywniany-czarny-7790.html?query_id=3',
+                info : {
+                    pranie : 'Tylko pranie ręczne, nie czyścić chemicznie, nie wybielać, nie prasować, nie suszyć w suszarce.',
+                    ramiaczkaRe : 'Ramiączka regulowane : Tak',
+                    ramiaczkaOd : 'Ramiączka odpinane: Nie',
+                    druty : 'Druty : Tak',
+                    haczyki : 'Haczyki do ramiączek: metalowe',
+                    zapiecie : 'Miejsce zapięcia: tył',
+                    kieszonki : 'Kieszonki na wkładki: Brak'
+                },
+            },
+        },
     },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     swimmwear: {
         item1 : {
-            name: 'Vivisence 3209, dwóczęściowy, niebieski',
-            img: require('../store/database/Vivisence_3209.jpg')
+            id: 'item1',
+            name: 'Vivisence 1035 Biustonosz push-up, beżowy',
+            shortName : 'Vivisence 1035',
+            type: 'Biustonosz push-up',
+            img: require('../store/database/Vivisence_1035.jpg'),
+            img2: require('../store/database/Vivisence_1035-2.jpg'),
+            img3: require('../store/database/Vivisence_1035-3.jpg'),
+            details : {
+                opis : 'Specjalistyczny biustonosz typu push-up do zadań specjalnych. Idealna propozycja do kreacji z odkrytymi plecami. Biustonosz w całości wykonany jest z gładkiej mikrofibry. Model bez fiszbin bocznych. Druty podtrzymują i kształtują piersi. Niski mostek. Wyjmowane wkładki powiększające. Ramiączka regulowane, odpinane. Ramiączka silikonowe. Trzy możliwości krzyżowania ramiączek. Plastikowe haczyki do ramiączek. W tyle przezroczysty silikonowy pasek obniżający zapięcie. Plastikowe zapięcie z przodu. Między miseczkami subtelna ozdoba. Bielizna pakowana jest w eleganckie pudełko, doskonale nadaje się na prezent',
+                sklad : '88% Polamid, 8% Bawełna, 4% Elastan',
+                redirect : 'https://www.kontri.pl/pl/products/vivisence-1035-biustonosz-push-up-bezowy-5176.html?query_id=3#product_askforproduct',
+                info : {
+                    pranie : 'Tylko pranie ręczne, nie czyścić chemicznie, nie wybielać, nie prasować, nie suszyć w suszarce.',
+                    ramiaczkaRe : 'Ramiączka regulowane : Tak',
+                    ramiaczkaOd : 'Ramiączka odpinane: Tak',
+                    druty : 'Druty : Tak',
+                    haczyki : 'Haczyki do ramiączek: plastikowe',
+                    zapiecie : 'Miejsce zapięcia: przód',
+                    kieszonki : 'Kieszonki na wkładki: Tak'
+                },
+            },
         },
         item2 : {
-            name: 'Vivisence 3209, dwóczęściowy, czarny',
-            img: require('../store/database/Vivisence_3209-1.jpg') 
+            id: 'item2',
+            name: 'Vivisence 1046 Biustonosz usztywniany, beżowy',
+            shortName : 'Vivisence 1046',
+            type: 'Biustonosz usztywniany',
+            img: require('../store/database/Vivisence_1046.jpg'),
+            img2: require('../store/database/Vivisence_1046-2.jpg'),
+            img3: require('../store/database/Vivisence_1046-3.jpg'),
+            details : {
+                opis : 'Wyjątkowy usztywniany biustonosz typu "SPACER". Miseczki termincznie kształtowane, wykonane z wewnętrznej i zewnętrznej warstwy mikrofibry, między którymi istnieje przestrzeń, dająca lepszy przepływ potwietrza, co pozwala oddychać skórze. Ergonomiczny kształt miseczek idealnie dopasowuje biust. Miseczki gładkie, bezszwowe - nie odznaczają się pod odzieżą wierzchnią. Miseczki od wewnątrz (od strony pachy) wzmocnione warstwą tiulu stabilnego, który zabezpiecza przed zniekształceniem biustonosza w trakcie użytkowania oraz przenosi ciążar biustu do przodu, pięknie eksponując dekolt. Pomiędzy miseczkami i na górze miski delikatne kokardki. Mostek wykonany z tiulu, który stabilizuje miseczki. Boczki z mikrofibry dają wysoki komfort użytkowania, również przy dużych biustach. Ramiączka regulowane, nieodpinane. Metalowe haczyki do ramiączek. Trzyrzędowe zapięcie na haftki z trzystopniową regulacją. Konstrukcja SPACERA sprawia, że biustonosz idealnie nadaje się zarówno do codziennego użytkowania, jak i podczas uprawiania różnego typu aktywności sportowej. Bielizna pakowana jest w eleganckie pudełko, idealna propozycja na prezent',
+                sklad : '90% poliamid, 10% elastan',
+                redirect : 'https://www.kontri.pl/pl/products/vivisence-1046-biustonosz-usztywniany-czarny-8718.html',
+                info : {
+                    pranie : 'Tylko pranie ręczne, nie czyścić chemicznie, nie wybielać, nie prasować, nie suszyć w suszarce.',
+                    ramiaczkaRe : 'Ramiączka regulowane : Tak',
+                    ramiaczkaOd : 'Ramiączka odpinane: Nie',
+                    druty : 'Druty : Tak',
+                    haczyki : 'Haczyki do ramiączek: metalowe',
+                    zapiecie : 'Miejsce zapięcia: tył',
+                    kieszonki : 'Kieszonki na wkładki: Tak'
+                },
+            },
         },
         item3 : {
-            name: 'Vivisence 3209, dwóczęściowy, różowy',
-            img:  require('../store/database/Vivisence_3209-2.jpg')
+            id: 'item3',
+            name: 'Vivisence Eve 1012 Biustonosz specjalistyczny, beżowy',
+            shortName : 'Vivisence Eve 1012',
+            type: 'Biustonosz specjalistyczny',
+            img: require('../store/database/Vivisence_1012.jpg'),
+            img2: require('../store/database/Vivisence_1012-2.jpg'),
+            img3: require('../store/database/Vivisence_1012-3.jpg'),
+            details : {
+                opis : 'Specjalistyczny biustonosz typu push-up do kreacji z odkrytymi plecami. Biustonosz w całości wykonany jest z gładkiej mikrofibry. Model bez fiszbin bocznych. Druty podtrzymują i kształtują piersi. Niski mostek. Wyjmowane wkładki powiększające. Ramiączka regulowane, odpinane. Ramiączka silikonowe. Metalowe haczyki do ramiączek. Z przodu plastikowe zapięcie. Z tyłu przezroczysta silikonowa taśma. Bielizna pakowana jest w eleganckie pudełko, doskonale nadaje się na prezent',
+                sklad : '88% poliamid, 8% bawełna, 4% elastan',
+                redirect : 'https://www.kontri.pl/pl/products/vivisence-eve-1012-biustonosz-specjalistyczny-bezowy-2383.html',
+                info : {
+                    pranie : 'Tylko pranie ręczne, nie czyścić chemicznie, nie wybielać, nie prasować, nie suszyć w suszarce.',
+                    ramiaczkaRe : 'Ramiączka regulowane : Tak',
+                    ramiaczkaOd : 'Ramiączka odpinane: Tak',
+                    druty : 'Druty : Tak',
+                    haczyki : 'Haczyki do ramiączek: metalowe',
+                    zapiecie : 'Miejsce zapięcia: przód',
+                    kieszonki : 'Kieszonki na wkładki: Tak'
+                },
+            },
         },
         item4 : {
-            name: 'Vivisence 3209, dwóczęściowy, morski',
-            img:  require('../store/database/Vivisence_3209-3.jpg')
+            id: 'item4',
+            name: 'Vivisence 1045 Biustonosz półusztywniany, czarny',
+            shortName : 'Vivisence 1045',
+            type: 'Biustonosz półusztywniany',
+            img: require('../store/database/Vivisence_1045.jpg'),
+            img2: require('../store/database/Vivisence_1045-2.jpg'),
+            img3: require('../store/database/Vivisence_1045-3.jpg'),
+            details : {
+                opis : 'Subtelny i niezwykle kobiecy biustonosz półusztywniany. Górna część miseczek wykonane są z połyskującej, kwiecistej koronki, podszytej siateczką. Dół miseczek wykonany jest z pianki gorseciarskiej pokrytej połyskującej koronką. Mostek i boczki wykonane z połyskującej koronki, podszytej siateczką. Między miseczkami urocza kokardka. Druty podtrzymują i kształtują piersi. Pionowe fiszbiny boczne. Ramiączka regulowane, nieodpinane. Metalowe haczyki do ramiączek. Plecy wykonane ze sprężystej, wzmocnionej siateczki. Dwurzędowe/trzystopniowe zapięcie na haftki z trzystopniową regulacją. Bielizna pakowana jest w eleganckie pudełko, doskonale nadaje się na prezent',
+                sklad : '47% nylon, 21% poliamid, 14% bawełna, 12% elastan, 6% poliuretan',
+                redirect : 'https://www.kontri.pl/pl/products/vivisence-1045-biustonosz-polusztywniany-czarny-7790.html?query_id=3',
+                info : {
+                    pranie : 'Tylko pranie ręczne, nie czyścić chemicznie, nie wybielać, nie prasować, nie suszyć w suszarce.',
+                    ramiaczkaRe : 'Ramiączka regulowane : Tak',
+                    ramiaczkaOd : 'Ramiączka odpinane: Nie',
+                    druty : 'Druty : Tak',
+                    haczyki : 'Haczyki do ramiączek: metalowe',
+                    zapiecie : 'Miejsce zapięcia: tył',
+                    kieszonki : 'Kieszonki na wkładki: Brak'
+                },
+            },
         },
         item5 : {
-            name: 'Vivisence 3207, dwóczęściowy, czarny',
-            img:  require('../store/database/Vivisence_3207.jpg')
+            id: 'item5',
+            name: 'Vivisence 1035 Biustonosz push-up, beżowy',
+            shortName : 'Vivisence 1035',
+            type: 'Biustonosz push-up',
+            img: require('../store/database/Vivisence_1035.jpg'),
+            img2: require('../store/database/Vivisence_1035-2.jpg'),
+            img3: require('../store/database/Vivisence_1035-3.jpg'),
+            details : {
+                opis : 'Specjalistyczny biustonosz typu push-up do zadań specjalnych. Idealna propozycja do kreacji z odkrytymi plecami. Biustonosz w całości wykonany jest z gładkiej mikrofibry. Model bez fiszbin bocznych. Druty podtrzymują i kształtują piersi. Niski mostek. Wyjmowane wkładki powiększające. Ramiączka regulowane, odpinane. Ramiączka silikonowe. Trzy możliwości krzyżowania ramiączek. Plastikowe haczyki do ramiączek. W tyle przezroczysty silikonowy pasek obniżający zapięcie. Plastikowe zapięcie z przodu. Między miseczkami subtelna ozdoba. Bielizna pakowana jest w eleganckie pudełko, doskonale nadaje się na prezent',
+                sklad : '88% Polamid, 8% Bawełna, 4% Elastan',
+                redirect : 'https://www.kontri.pl/pl/products/vivisence-1035-biustonosz-push-up-bezowy-5176.html?query_id=3#product_askforproduct',
+                info : {
+                    pranie : 'Tylko pranie ręczne, nie czyścić chemicznie, nie wybielać, nie prasować, nie suszyć w suszarce.',
+                    ramiaczkaRe : 'Ramiączka regulowane : Tak',
+                    ramiaczkaOd : 'Ramiączka odpinane: Tak',
+                    druty : 'Druty : Tak',
+                    haczyki : 'Haczyki do ramiączek: plastikowe',
+                    zapiecie : 'Miejsce zapięcia: przód',
+                    kieszonki : 'Kieszonki na wkładki: Tak'
+                },
+            },
         },
         item6 : {
-            name: 'Vivisence 3207, dwóczęściowy, czerwony',
-            img:  require('../store/database/Vivisence_3207-1.jpg')
+            id: 'item6',
+            name: 'Vivisence 1046 Biustonosz usztywniany, beżowy',
+            shortName : 'Vivisence 1046',
+            type: 'Biustonosz usztywniany',
+            img: require('../store/database/Vivisence_1046.jpg'),
+            img2: require('../store/database/Vivisence_1046-2.jpg'),
+            img3: require('../store/database/Vivisence_1046-3.jpg'),
+            details : {
+                opis : 'Wyjątkowy usztywniany biustonosz typu "SPACER". Miseczki termincznie kształtowane, wykonane z wewnętrznej i zewnętrznej warstwy mikrofibry, między którymi istnieje przestrzeń, dająca lepszy przepływ potwietrza, co pozwala oddychać skórze. Ergonomiczny kształt miseczek idealnie dopasowuje biust. Miseczki gładkie, bezszwowe - nie odznaczają się pod odzieżą wierzchnią. Miseczki od wewnątrz (od strony pachy) wzmocnione warstwą tiulu stabilnego, który zabezpiecza przed zniekształceniem biustonosza w trakcie użytkowania oraz przenosi ciążar biustu do przodu, pięknie eksponując dekolt. Pomiędzy miseczkami i na górze miski delikatne kokardki. Mostek wykonany z tiulu, który stabilizuje miseczki. Boczki z mikrofibry dają wysoki komfort użytkowania, również przy dużych biustach. Ramiączka regulowane, nieodpinane. Metalowe haczyki do ramiączek. Trzyrzędowe zapięcie na haftki z trzystopniową regulacją. Konstrukcja SPACERA sprawia, że biustonosz idealnie nadaje się zarówno do codziennego użytkowania, jak i podczas uprawiania różnego typu aktywności sportowej. Bielizna pakowana jest w eleganckie pudełko, idealna propozycja na prezent',
+                sklad : '90% poliamid, 10% elastan',
+                redirect : 'https://www.kontri.pl/pl/products/vivisence-1046-biustonosz-usztywniany-czarny-8718.html',
+                info : {
+                    pranie : 'Tylko pranie ręczne, nie czyścić chemicznie, nie wybielać, nie prasować, nie suszyć w suszarce.',
+                    ramiaczkaRe : 'Ramiączka regulowane : Tak',
+                    ramiaczkaOd : 'Ramiączka odpinane: Nie',
+                    druty : 'Druty : Tak',
+                    haczyki : 'Haczyki do ramiączek: metalowe',
+                    zapiecie : 'Miejsce zapięcia: tył',
+                    kieszonki : 'Kieszonki na wkładki: Tak'
+                },
+            },
         },
         item7 : {
-            name: 'Vivisence 3001, dwóczęściowy, kropki',
-            img:  require('../store/database/Vivisence_3001.jpg')
+            id: 'item7',
+            name: 'Vivisence Eve 1012 Biustonosz specjalistyczny, beżowy',
+            shortName : 'Vivisence Eve 1012',
+            type: 'Biustonosz specjalistyczny',
+            img: require('../store/database/Vivisence_1012.jpg'),
+            img2: require('../store/database/Vivisence_1012-2.jpg'),
+            img3: require('../store/database/Vivisence_1012-3.jpg'),
+            details : {
+                opis : 'Specjalistyczny biustonosz typu push-up do kreacji z odkrytymi plecami. Biustonosz w całości wykonany jest z gładkiej mikrofibry. Model bez fiszbin bocznych. Druty podtrzymują i kształtują piersi. Niski mostek. Wyjmowane wkładki powiększające. Ramiączka regulowane, odpinane. Ramiączka silikonowe. Metalowe haczyki do ramiączek. Z przodu plastikowe zapięcie. Z tyłu przezroczysta silikonowa taśma. Bielizna pakowana jest w eleganckie pudełko, doskonale nadaje się na prezent',
+                sklad : '88% poliamid, 8% bawełna, 4% elastan',
+                redirect : 'https://www.kontri.pl/pl/products/vivisence-eve-1012-biustonosz-specjalistyczny-bezowy-2383.html',
+                info : {
+                    pranie : 'Tylko pranie ręczne, nie czyścić chemicznie, nie wybielać, nie prasować, nie suszyć w suszarce.',
+                    ramiaczkaRe : 'Ramiączka regulowane : Tak',
+                    ramiaczkaOd : 'Ramiączka odpinane: Tak',
+                    druty : 'Druty : Tak',
+                    haczyki : 'Haczyki do ramiączek: metalowe',
+                    zapiecie : 'Miejsce zapięcia: przód',
+                    kieszonki : 'Kieszonki na wkładki: Tak'
+                },
+            },
         },
         item8 : {
-            name: 'Vivisence 3101, jednoczęściowy, paski',
-            img:  require('../store/database/Vivisence_3101.jpg')
+            id: 'item8',
+            name: 'Vivisence 1045 Biustonosz półusztywniany, czarny',
+            shortName : 'Vivisence 1045',
+            type: 'Biustonosz półusztywniany',
+            img: require('../store/database/Vivisence_1045.jpg'),
+            img2: require('../store/database/Vivisence_1045-2.jpg'),
+            img3: require('../store/database/Vivisence_1045-3.jpg'),
+            details : {
+                opis : 'Subtelny i niezwykle kobiecy biustonosz półusztywniany. Górna część miseczek wykonane są z połyskującej, kwiecistej koronki, podszytej siateczką. Dół miseczek wykonany jest z pianki gorseciarskiej pokrytej połyskującej koronką. Mostek i boczki wykonane z połyskującej koronki, podszytej siateczką. Między miseczkami urocza kokardka. Druty podtrzymują i kształtują piersi. Pionowe fiszbiny boczne. Ramiączka regulowane, nieodpinane. Metalowe haczyki do ramiączek. Plecy wykonane ze sprężystej, wzmocnionej siateczki. Dwurzędowe/trzystopniowe zapięcie na haftki z trzystopniową regulacją. Bielizna pakowana jest w eleganckie pudełko, doskonale nadaje się na prezent',
+                sklad : '47% nylon, 21% poliamid, 14% bawełna, 12% elastan, 6% poliuretan',
+                redirect : 'https://www.kontri.pl/pl/products/vivisence-1045-biustonosz-polusztywniany-czarny-7790.html?query_id=3',
+                info : {
+                    pranie : 'Tylko pranie ręczne, nie czyścić chemicznie, nie wybielać, nie prasować, nie suszyć w suszarce.',
+                    ramiaczkaRe : 'Ramiączka regulowane : Tak',
+                    ramiaczkaOd : 'Ramiączka odpinane: Nie',
+                    druty : 'Druty : Tak',
+                    haczyki : 'Haczyki do ramiączek: metalowe',
+                    zapiecie : 'Miejsce zapięcia: tył',
+                    kieszonki : 'Kieszonki na wkładki: Brak'
+                },
+            },
         },
 
     }

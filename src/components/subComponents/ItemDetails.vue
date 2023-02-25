@@ -11,7 +11,7 @@
           <div class="product__imageframe">
             <div class="imageframe--image">
               <img class="arrows"
-              @click="currentImage >= 1 ? currentImage-- : null" 
+              @click="currentImage >= 1 ? currentImage-- : currentImage = 2" 
               :src="lessThanPath">
 
               <img v-show="currentImage == 0" 
@@ -27,7 +27,7 @@
               :src="details.img3" />
 
               <img class="arrows"
-              @click="currentImage <= 1 ? currentImage++ : null" 
+              @click="currentImage <= 1 ? currentImage++ : currentImage = 0" 
               :src="greaterThanPath">
 
             </div>
