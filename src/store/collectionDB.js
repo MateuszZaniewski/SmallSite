@@ -6,6 +6,8 @@ export const database = {
             shortName : 'Vivisence 1035',
             type: 'Biustonosz usztywniany',
             img: require('../store/database/Vivisence_1035.jpg'),
+            img2: require('../store/database/Vivisence_1035-2.jpg'),
+            img3: require('../store/database/Vivisence_1035-3.jpg'),
             details : {
                 opis : 'Specjalistyczny biustonosz typu push-up do zadań specjalnych. Idealna propozycja do kreacji z odkrytymi plecami. Biustonosz w całości wykonany jest z gładkiej mikrofibry. Model bez fiszbin bocznych. Druty podtrzymują i kształtują piersi. Niski mostek. Wyjmowane wkładki powiększające. Ramiączka regulowane, odpinane. Ramiączka silikonowe. Trzy możliwości krzyżowania ramiączek. Plastikowe haczyki do ramiączek. W tyle przezroczysty silikonowy pasek obniżający zapięcie. Plastikowe zapięcie z przodu. Między miseczkami subtelna ozdoba. Bielizna pakowana jest w eleganckie pudełko, doskonale nadaje się na prezent',
                 sklad : '88% Polamid, 8% Bawełna, 4% Elastan',

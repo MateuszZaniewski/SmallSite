@@ -10,13 +10,42 @@
 
           <div class="product__imageframe">
             <div class="imageframe--image">
-              <img class="image" :src="details.img" />
+              <img class="arrows"
+              @click="currentImage >= 1 ? currentImage-- : null" 
+              :src="lessThanPath">
+
+              <img v-show="currentImage == 0" 
+              class="image" 
+              :src="details.img" />
+
+              <img v-show="currentImage == 1" 
+              class="image" 
+              :src="details.img2" />
+
+              <img v-show="currentImage == 2" 
+              class="image" 
+              :src="details.img3" />
+
+              <img class="arrows"
+              @click="currentImage <= 1 ? currentImage++ : null" 
+              :src="greaterThanPath">
+
             </div>
             <div class="imageframe--sliders">
-              <span>&#8226;</span>
-              <span>&#8226;</span>
-              <span>&#8226;</span>
+              <span
+              :class="currentImage == 0 ? 'coloredDot' : 'defauldDot'"
+              >&#8226;</span>
+
+              <span 
+              :class="currentImage == 1 ? 'coloredDot' : 'defauldDot'"
+              >&#8226;</span>
+
+              <span
+              :class="currentImage == 2 ? 'coloredDot' : 'defauldDot'"
+              >&#8226;</span>
+
             </div>
+
           </div>
 
           <div class="product__summary">
@@ -71,10 +100,14 @@ export default {
     const itemName = ref(props.name.name)
     const backButtonPath = require('../../assets/backButton.png')
     const leavingSitePath = require('../../assets/leavingSite.png')
+    const lessThanPath = require('../../assets/lessThan.png')
+    const greaterThanPath = require('../../assets/greaterThan.png')
     return {
       itemName,
       backButtonPath,
       leavingSitePath,
+      lessThanPath,
+      greaterThanPath,
     }
   },
   data(props) {
@@ -85,6 +118,7 @@ export default {
         showSklad : false,
         showPranie : false,
         expandAll : false,
+        currentImage: 0,
 
     }
   },
@@ -125,6 +159,7 @@ export default {
 .imageframe--image {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .image {
@@ -140,6 +175,20 @@ export default {
   margin: 0.75rem;
   font-size: 1.8rem;
   height: fit-content;
+}
+
+.arrows {
+  height: 30px;
+  width: 30px;
+  margin: 0 0.5rem;
+}
+
+.coloredDot {
+  color: #f0bc64;
+}
+
+.defaultDot {
+  color: #363636;
 }
 
 .product__summary {
