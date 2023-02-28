@@ -94,8 +94,9 @@ export default {
     name: {
       type: Object,
       required: true
-    }
+    },
   },
+
   setup(props){
     const itemName = ref(props.name.name)
     const backButtonPath = require('../../assets/backButton.png')
@@ -122,17 +123,18 @@ export default {
 
     }
   },
-  computed: {
-    filteredItems() {
-    const filtered = {}
-    for (const key in this.db.collection) {
-      if (Object.prototype.hasOwnProperty.call(this.db.collection, key) && this.db.collection[key].id === this.filterName) {
-        filtered[key] = this.db.collection[key]
+    computed: {
+      filteredItems() {
+      const filtered = {}
+      for (const key in this.db.collection) {
+        if (Object.prototype.hasOwnProperty.call(this.db.collection, key) && this.db.collection[key].id === this.filterName) {
+          filtered[key] = this.db.collection[key]
+        }
       }
-    }
-    return filtered
-  },
-}
+      console.log(filtered)
+      return filtered
+    },
+  }
 }
 </script>
 
@@ -150,10 +152,6 @@ export default {
 .backButton {
   height: 35px;
   width: 35px;
-}
-
-.product__imageframe {
-
 }
 
 .imageframe--image {
@@ -220,13 +218,6 @@ export default {
   border-radius: 0.5rem;
 }
 
-.product__details {
-
-}
-
-.details--text {
-
-}
 
 .details--more{
   text-align: center;

@@ -1,7 +1,8 @@
 <template>
+  
     <MainHeader/>
     <router-view>
-        <ItemDetails :name="{name}"/>
+        <ItemDetails :name="{name}" :shortName="{width}"/>
     </router-view>
     <FooterMain/>
   </template>
@@ -23,7 +24,7 @@
         name: {
             type: String,
             required: true
-        }
+        },
     },
     data () {
       return {

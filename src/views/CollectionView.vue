@@ -13,7 +13,7 @@
   import FooterMain from '../components/FooterMain.vue'
   
   export default {
-    name: 'HomeView', 
+    name: 'CollectionView', 
     components: {
       MainHeader,
       FooterMain,

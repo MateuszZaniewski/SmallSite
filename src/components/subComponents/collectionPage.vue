@@ -25,7 +25,15 @@ export default {
     }
   },
   computed: {
-    
+    BraCollection() {
+       return Object.values(database.collection).filter(item => item.fil === 'Bra')
+    },
+    NightwearCollection() {
+        return Object.values(database.collection).filter(item => item.fil == 'Nightwear')
+    },
+    SwimmwearCollection() {
+        return Object.values(database.collection).filter(item => item.fil == 'Swimmwear')
+    }
   },
   mounted() {
     
@@ -43,9 +51,9 @@ export default {
     },
   },
   setup() {
-
+    const backButtonPath = require('../../assets/backButton.png')
     return {
-
+        backButtonPath
     }
   }
 }
@@ -54,8 +62,14 @@ export default {
 <template>
     <div v-if="!isToggled" class="showFilterBox">
         <div class="checkbox">
-            <span>Pokaż filtry</span>
-            <input type="checkbox" v-model="checked">
+            <div class="product__backbutton">
+                <img @click="this.$router.go(-1)" class="backButton" :src="backButtonPath">
+              </div>
+            <div>
+                <span>Pokaż filtry</span>
+                <input type="checkbox" v-model="checked">
+            </div>
+            
         </div>
         <div v-if="checked" class="filterBox">
             <button 
@@ -81,75 +95,70 @@ export default {
         </div>
     </div>
         <div  id="collectionWrapper">
-            <h2 v-if="showSection1">Bielizna</h2>
             <ul v-if="showSection1">
-                <li v-for="(item, index) in db.collection" v-bind:key="item">
-                    
-                        <div :id="index">
+                <li v-for="(item, index) in BraCollection" :key="item">
+                        <div  :id="index">
                             <img  :src="item.img">
                             <p>{{item.name}}</p>
 
-                            <router-link class="redirect" :to="{ 
+                            <router-link :shortName="item.type" class="redirect" :to="{ 
                                 name: 'item', 
                                 params: {
-                                    name: index
+                                    name: item.id,
                                 },
                                 }"
                                 >Zobacz
                             </router-link>
-                        </div>
-
-                        
+                        </div>   
                 </li>
             </ul>
-
-            <h2 v-if="showSection2">Koszule nocne</h2>
             <ul v-if="showSection2">
-                <li v-for="(item, index) in db.nightwear" v-bind:key="item">
-                    
-                    <div :id="index">
-                        <img  :src="item.img">
-                        <p>{{item.name}}</p>
+                <li v-for="(item, index) in NightwearCollection" :key="item">
+                        <div :id="index">
+                            <img  :src="item.img">
+                            <p>{{item.name}}</p>
 
-                        <router-link class="redirect" :to="{ 
-                            name: 'item', 
-                            params: {
-                                name: index
-                            },
-                            }"
-                            >Zobacz
-                        </router-link>
-                    </div>
-
-                    
-            </li>
+                            <router-link :shortName="item.type" class="redirect" :to="{ 
+                                name: 'item', 
+                                params: {
+                                    name: item.id,
+                                },
+                                }"
+                                >Zobacz
+                            </router-link>
+                        </div>   
+                </li>
             </ul>
-            <h2 v-if="showSection3">Stroje kąpielowe</h2>
             <ul v-if="showSection3">
-                <li v-for="(item, index) in db.swimmwear" v-bind:key="item">
-                    
-                    <div :id="index">
-                        <img  :src="item.img">
-                        <p>{{item.name}}</p>
+                <li v-for="(item, index) in SwimmwearCollection" :key="item">
+                        <div :id="index">
+                            <img  :src="item.img">
+                            <p>{{item.name}}</p>
 
-                        <router-link class="redirect" :to="{ 
-                            name: 'item', 
-                            params: {
-                                name: index
-                            },
-                            }"
-                            >Zobacz
-                        </router-link>
-                    </div>
-
-                    
-            </li>
+                            <router-link :shortName="item.type" class="redirect" :to="{ 
+                                name: 'item', 
+                                params: {
+                                    name: item.id,
+                                },
+                                }"
+                                >Zobacz
+                            </router-link>
+                        </div>   
+                </li>
             </ul>
         </div>
 </template>
 
 <style scoped>
 
+.product__backbutton {
+    padding: 0.5rem 0 0 0.5rem;
+  }
+  
+  .backButton {
+    height: 35px;
+    width: 35px;
+  }
 .redirect{
     background: rgb(207, 206, 206);
     color: black;
@@ -232,7 +241,9 @@ h2 {
 
 .checkbox {
     display: flex;
-    justify-content: right;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
     align-items: center;
     padding-right: 10px;
     padding-bottom: 10px;
