@@ -8,71 +8,89 @@
             <img @click="this.$router.go(-1)" class="backButton" :src="backButtonPath">
           </div>
 
-          <div class="product__imageframe">
-            <div class="imageframe--image">
-              <img class="arrows"
-              @click="currentImage >= 1 ? currentImage-- : currentImage = 2" 
-              :src="lessThanPath">
-
-              <img v-show="currentImage == 0" 
-              class="image" 
-              :src="details.img" />
-
-              <img v-show="currentImage == 1" 
-              class="image" 
-              :src="details.img2" />
-
-              <img v-show="currentImage == 2" 
-              class="image" 
-              :src="details.img3" />
-
-              <img class="arrows"
-              @click="currentImage <= 1 ? currentImage++ : currentImage = 0" 
-              :src="greaterThanPath">
-
+          <div class="highRes">
+            <div class="highResLeft">
+              <div class="product__imageframe">
+                <div class="imageframe--image">
+                  <img class="arrows"
+                  @click="currentImage >= 1 ? currentImage-- : currentImage = 2" 
+                  :src="lessThanPath">
+    
+                  <img v-show="currentImage == 0"
+                  id="image1"
+                  class="image" 
+                  :src="details.img" />
+    
+                  <img v-show="currentImage == 1"
+                  id="image2" 
+                  class="image" 
+                  :src="details.img2" />
+    
+                  <img v-show="currentImage == 2"
+                  id="image3"
+                  class="image" 
+                  :src="details.img3" />
+    
+                  <img class="arrows"
+                  @click="currentImage <= 1 ? currentImage++ : currentImage = 0" 
+                  :src="greaterThanPath">
+    
+                </div>
+                <div class="imageframe--sliders">
+                  <span
+                  :class="currentImage == 0 ? 'coloredDot' : 'defauldDot'"
+                  >&#8226;</span>
+    
+                  <span 
+                  :class="currentImage == 1 ? 'coloredDot' : 'defauldDot'"
+                  >&#8226;</span>
+    
+                  <span
+                  :class="currentImage == 2 ? 'coloredDot' : 'defauldDot'"
+                  >&#8226;</span>
+    
+                </div>
+    
+              </div>
             </div>
-            <div class="imageframe--sliders">
-              <span
-              :class="currentImage == 0 ? 'coloredDot' : 'defauldDot'"
-              >&#8226;</span>
-
-              <span 
-              :class="currentImage == 1 ? 'coloredDot' : 'defauldDot'"
-              >&#8226;</span>
-
-              <span
-              :class="currentImage == 2 ? 'coloredDot' : 'defauldDot'"
-              >&#8226;</span>
-
+            <div class="highResRight">
+              <div class="product__summary">
+                <span class="summary--shortName">{{details.shortName}}</span>
+                <span class="summary--type">{{details.type}}</span>
+              </div>
+    
+              <div class="product__buttons">
+                <button 
+                @click="showOpis = true, showSklad = false , showPranie = false, expandAll = false" 
+                :class="showOpis ? 'active' : 'notActive'">Opis produktu</button>
+                <button 
+                @click="showOpis = false, showSklad = true , showPranie = false , expandAll = true" 
+                :class="showSklad ? 'active' : 'notActive'">Skład produktu</button>
+                <button 
+                @click="showOpis = false, showSklad = false , showPranie = true, expandAll = true" 
+                :class="showPranie ? 'active' : 'notActive'">Inne informacje</button>
+              </div>
+    
+              <div class="product__details">
+                <p v-if="showOpis" class="details--text">{{!expandAll ? `${details.details.opis.substring(0, 200)}...` : details.details.opis }}</p>
+                <p v-if="showSklad" class="details--text">{{details.details.sklad}}</p>
+                <div v-if="showPranie" class="details--text">
+                  <ul v-for="infos in details.details.info" :key="infos">
+                    <li>{{infos}}</li>
+                  </ul>
+                </div>
+                <p v-if="!expandAll" @click="expandAll = true" class="details--more">Pokaż więcej &#8595;</p>
+              </div>
+    
+              <div class="product__redirect">
+                <a :href="details.details.redirect" class="redirect--button">Sprawdz w sklepie!</a>
+              </div>
             </div>
-
           </div>
 
-          <div class="product__summary">
-            <span class="summary--shortName">{{details.shortName}}</span>
-            <span class="summary--type">{{details.type}}</span>
-          </div>
+          
 
-          <div class="product__buttons">
-            <button @click="showOpis = true, showSklad = false , showPranie = false, expandAll = false" class="buttons--button">Opis produktu</button>
-            <button @click="showOpis = false, showSklad = true , showPranie = false , expandAll = true" class="buttons--button">Skład produktu</button>
-            <button @click="showOpis = false, showSklad = false , showPranie = true, expandAll = true" class="buttons--button">Inne informacje</button>
-          </div>
-
-          <div class="product__details">
-            <p v-if="showOpis" class="details--text">{{!expandAll ? `${details.details.opis.substring(0, 200)}...` : details.details.opis }}</p>
-            <p v-if="showSklad" class="details--text">{{details.details.sklad}}</p>
-            <div v-if="showPranie" class="details--text">
-              <ul v-for="infos in details.details.info" :key="infos">
-                <li>{{infos}}</li>
-              </ul>
-            </div>
-            <p v-if="!expandAll" @click="expandAll = true" class="details--more">Pokaż więcej &#8595;</p>
-          </div>
-
-          <div class="product__redirect">
-            <a :href="details.details.redirect" class="redirect--button">Sprawdz w sklepie!</a>
-          </div>
+          
 
         </div>  
       </div>
@@ -131,7 +149,6 @@ export default {
           filtered[key] = this.db.collection[key]
         }
       }
-      console.log(filtered)
       return filtered
     },
   }
@@ -152,6 +169,10 @@ export default {
 .backButton {
   height: 35px;
   width: 35px;
+}
+
+.backButton:hover{
+  scale: 1.2;
 }
 
 .imageframe--image {
@@ -179,6 +200,11 @@ export default {
   height: 30px;
   width: 30px;
   margin: 0 0.5rem;
+  cursor: pointer;
+}
+
+.arrows:hover{
+  scale: 1.2;
 }
 
 .coloredDot {
@@ -211,16 +237,31 @@ export default {
   margin-top: 1rem;
 }
 
-.buttons--button {
+.active {
   padding: 0.25rem 0.5rem;
   background: #f0bc64;
   border: 1px solid #f0bc64;
   border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.notActive {
+  padding: 0.25rem 0.5rem;
+  background: #adadac;
+  border: 1px solid #adadac;
+  border-radius: 0.5rem;
+  cursor: pointer;
 }
 
 
 .details--more{
   text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.details--more:hover{
+  opacity: 0.8;
 }
 
 .product__redirect {
@@ -235,7 +276,40 @@ export default {
   border-radius: 0.5rem;
   text-decoration: none;
   color: #1b1b1b;
-  
+}
+
+.redirect--button:hover{
+  opacity: 0.8;
+}
+
+@media (min-width: 700px) and (max-width: 1000px) {
+
+  .image {
+    height: 30%;
+    width: 30%;
+  }
+
+}
+
+@media (min-width: 1001px) {
+
+  .highRes {
+    display: flex;
+  }
+
+  .highResLeft {
+    width: 40%;
+  }
+
+  .highResRight {
+    width: 60%;
+  }
+
+  .image {
+    height: 60%;
+    width: 60%;
+  }
+
 }
 
 </style>

@@ -13,6 +13,10 @@ export default {
 
   data() {
     const scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop
+    const numberOfItemsInTotal = Object.keys(database.collection).length
+    const BraPreCollection = Object.values(database.collection).filter(item => item.fil === 'Bra').length
+    const NightwearPreCollection = Object.values(database.collection).filter(item => item.fil == 'Nightwear').length
+    const SwimmwearPreCollection = Object.values(database.collection).filter(item => item.fil == 'Swimmwear').length
 
     return {
        db : database,
@@ -22,6 +26,10 @@ export default {
        checked: false,
        isToggled : false,
        scrollTop,
+       numberOfItemsInTotal,
+       BraPreCollection,
+       NightwearPreCollection,
+       SwimmwearPreCollection
     }
   },
   computed: {
@@ -76,22 +84,22 @@ export default {
             @click="showSection1 = true, showSection2 = true, showSection3 = true"
             :class="showSection1 && showSection2 && showSection3 ? 'open' : 'closed' "
             id="showAll"
-            >Pokaż wszystko</button>
+            >Pokaż wszystko ({{ numberOfItemsInTotal }})</button>
             <button 
             @click="showSection1 = true, showSection2 = false, showSection3 = false"
-            :class="showSection1 ? 'open' : 'closed'"
+            :class="showSection1 && !showSection2 && !showSection3 ? 'open' : 'closed'"
             id="bielizna"
-            >Bielizna</button>
+            >Bielizna ({{BraPreCollection}})</button>
             <button 
             @click="showSection1 = false, showSection2 = true, showSection3 = false"
-            :class="showSection2 ? 'open' : 'closed'"
+            :class="showSection2 && !showSection1 && !showSection3 ? 'open' : 'closed'"
             id="koszule"
-            >Koszule nocne</button>
+            >Koszule nocne ({{ NightwearPreCollection }})</button>
             <button 
             @click="showSection1 = false, showSection2 = false, showSection3 = true"
-            :class="showSection3 ? 'open' : 'closed'"
+            :class="showSection3 && !showSection1 && !showSection2 ? 'open' : 'closed'"
             id="stroje"
-            >Stroje kąpielowe</button>
+            >Stroje kąpielowe ({{ SwimmwearPreCollection }})</button>
         </div>
     </div>
         <div  id="collectionWrapper">
@@ -159,12 +167,21 @@ export default {
     height: 35px;
     width: 35px;
   }
+
+  .backButton:hover{
+    scale: 1.2;
+  }
+
 .redirect{
     background: rgb(207, 206, 206);
     color: black;
     text-decoration: none;
     padding: 0.25rem 0.5rem;
     border-radius: 0.5rem;
+}
+
+.redirect:hover{
+    background : #f0bc64;
 }
 
 h1{
@@ -233,7 +250,7 @@ h2 {
 }
 
 .closed{
-    background-color: rgb(243, 209, 151);
+    background: #adadac;
     border: none;
     padding: 0.25rem 0.5rem;
     border-radius: 0.5rem;

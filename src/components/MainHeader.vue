@@ -51,7 +51,7 @@ export default {
       if(document.body.style.overflow == 'hidden'){
         document.body.style.overflow = 'scroll'
       }
-    }
+    },
   },
   mounted() {
     

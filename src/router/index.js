@@ -48,7 +48,8 @@ const routes = [
 const router = createRouter({
   mode: 'hash',
   history: createWebHashHistory(process.env.BASE_URL),
-  routes
+  routes,
+  
 })
 
 export default router

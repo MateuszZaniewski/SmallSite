@@ -116,6 +116,8 @@ img{
 }
 
 .rewardsWrapper{
+    width: 90%;
+    margin: 0 auto;
     display: flex;
     margin-bottom: 2vh;
     justify-content: center;
